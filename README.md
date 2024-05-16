@@ -19,9 +19,17 @@
 
 - Prerequisite: [Ruby](https://jekyllrb.com/docs/installation/)
 - Clone the repo.
-- Install the gems:
+- Install gems:
   - `bundle install`
 - Build and run the site:
   - `bundle exec jekyll serve`
 - Confirm the site is built correctly, including its links.
   - <http://localhost:4000/notes/>.
+
+## Repo-Specific Items
+
+- Remove [sponsor buttons](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository) on the repo.
+  - Remove `.github/FUNDING.yml`.
+  - Repo > Settings > General > uncheck "Sponsorships".
+- Update [LICENSE](LICENSE).
+- Remove `.ruby-version`.
