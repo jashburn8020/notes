@@ -33,3 +33,13 @@
   - Repo > Settings > General > uncheck "Sponsorships".
 - Update [LICENSE](LICENSE).
 - Remove `.ruby-version`.
+
+## Favicon
+
+- Remove the default favicon images:
+  - `favicon.ico`
+  - `images/favicon-32x32.png`
+- Create your favicons, e.g., using <https://favicon.io/favicon-generator/>.
+- Put the new favicons into [`images`](images).
+  - Note: If the new favicons include a `site.manifest` file, ensure the file's icon `src`s point to the right location and update other details accordingly.
+- Update [`_layouts/default.html`](_layouts/default.html) to point to the new favicons.
