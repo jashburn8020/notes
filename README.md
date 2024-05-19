@@ -44,14 +44,18 @@
   - Note: If the new favicons include a `site.webmanifest` file, ensure the file's icon `src`s point to the right location and update other details accordingly.
 - Update [`_layouts/default.html`](_layouts/default.html) to point to the new favicons.
 
-## Title and Header
+## Title, Header, and Footer
 
 - Update site `name` in [`_config.yml`](_config.yml).
 - Update site `description` in [`_config.yml`](_config.yml).
 - Change site `avatar` (logo) in [`_config.yml`](_config.yml).
   - Replace default site avatar: `images/reverie.png`
-- If removing the site avatar:
-  - remove `site-avatar` class in [`assets/style.scss`](assets/style.scss)
-  - remove `site.avatar` variable in [`_includes/meta.html`](_includes/meta.html)
-  - remove `avatar` variable in [`_config.yml`](_config.yml)
-  - remove the corresponding HTML code in [`_layouts/default.html`](_layouts/default.html)
+  - If removing the site avatar:
+    - remove `site-avatar` class in [`assets/style.scss`](assets/style.scss)
+    - remove `site.avatar` variable in [`_includes/meta.html`](_includes/meta.html)
+    - remove `avatar` variable in [`_config.yml`](_config.yml)
+    - remove the corresponding HTML code in [`_layouts/default.html`](_layouts/default.html)
+- Update site `author` in [`_config.yml`](_config.yml).
+  - Replace `author` `{{ site.name }}` with `{{ site.author }}` in [`_includes/meta.html`](_includes/meta.html).
+- Update `footer-links` in [`_config.yml`](_config.yml).
+  - An empty value under the `footer-links` mapping will omit the corresponding footer icon as implemented in [`_includes/svg-icons.html`](_includes/svg-icons.html).
