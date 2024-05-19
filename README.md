@@ -59,3 +59,13 @@
   - Replace `author` `{{ site.name }}` with `{{ site.author }}` in [`_includes/meta.html`](_includes/meta.html).
 - Update `footer-links` in [`_config.yml`](_config.yml).
   - An empty value under the `footer-links` mapping will omit the corresponding footer icon as implemented in [`_includes/svg-icons.html`](_includes/svg-icons.html).
+
+## Fonts
+
+- Select a font from [Google Fonts](https://fonts.google.com/) and get the font's embed code.
+  - Add the font's embed code to [`_layouts/default.html`](_layouts/default.html).
+- Replace existing font stacks in [`_sass/_variables.scss`](_sass/_variables.scss) with a new font stack that includes the selected font.
+  - Switch references to the existing font stack in [`assets/style.scss`](assets/style.scss) to the new font stack.
+- Update font settings in [`assets/style.scss`](assets/style.scss).
+  - Remove redundant (font) import at-rule.
+  - Replace existing `font-family` values with the new font stack.
