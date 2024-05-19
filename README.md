@@ -69,3 +69,9 @@
 - Update font settings in [`assets/style.scss`](assets/style.scss).
   - Remove redundant (font) import at-rule.
   - Replace existing `font-family` values with the new font stack.
+
+## Redundant and Other Unwanted Elements
+
+- Remove Carbon Ads and related resources:
+  - [`_posts/2019-02-13-introducing-reverie-jekyll-theme.md`](_posts/2019-02-13-introducing-reverie-jekyll-theme.md)
+  - [`assets/style.scss`](assets/style.scss) (search for "carbon")
