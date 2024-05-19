@@ -3,16 +3,16 @@
 #
 
 # Name of your site (displayed in the header)
-name: Reverie
+name: jashburn8020's Notes
 
 # Name of the author
 author: Amit Merchant
 
 # Short bio or description (displayed in the header)
-description: An elegant Jekyll theme
+description: Point form notes on various topics
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: /images/reverie.png
+avatar: /images/android-chrome-512x512.png
 
 #
 # Flags below are optional
