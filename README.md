@@ -76,3 +76,7 @@
   - `_posts/2019-02-13-introducing-reverie-jekyll-theme.md`
   - [`assets/style.scss`](assets/style.scss) (search for "carbon")
 - Remove Google Analytics tracking code in [`_config.yml`](_config.yml).
+
+## RSS Feed and Sitemap
+
+- Update RSS feed and sitemap URL in [`_config.yml`](_config.yml).
