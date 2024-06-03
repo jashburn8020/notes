@@ -94,3 +94,5 @@
   - Update [`assets/style.scss`](assets/style.scss) (`site-name` class).
 - Nav bar font weight:
   - Update [`assets/style.scss`](assets/style.scss) (`nav` element).
+- Search result styles:
+  - Update [`_pages/search.md`](_pages/search.md) (`searchResultTemplate` field).
