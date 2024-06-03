@@ -80,3 +80,17 @@
 ## RSS Feed and Sitemap
 
 - Update RSS feed and sitemap URL in [`_config.yml`](_config.yml).
+
+## Superficial Changes
+
+- Date format:
+  - Change date format in:
+    - [`index.html`](index.html)
+    - [`_layouts/post.html`](_layouts/post.html)
+    - [`_pages/archive.md`](_pages/archive.md)
+    - [`search.json`](search.json)
+  - See <https://shopify.github.io/liquid/filters/date/> for the date format syntax.
+- Header font weight:
+  - Update [`assets/style.scss`](assets/style.scss) (`site-name` class).
+- Nav bar font weight:
+  - Update [`assets/style.scss`](assets/style.scss) (`nav` element).
