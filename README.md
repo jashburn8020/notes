@@ -96,3 +96,27 @@
   - Update [`assets/style.scss`](assets/style.scss) (`nav` element).
 - Search result styles:
   - Update [`_pages/search.md`](_pages/search.md) (`searchResultTemplate` field).
+
+## Default Pages, Posts, and Other Elements
+
+- 404 page:
+  - Remove image in [`404.md`](404.md).
+  - Delete corresponding image.
+- Getting Started page:
+  - Delete `_pages/getting-started.md`.
+  - Remove link in [`_layouts/default.html`](_layouts/default.html).
+- About page:
+  - Delete `_pages/about.md`.
+- Fonts:
+  - Delete `fonts/aramisi.ttf`.
+  - Delete `fonts/EBGaramond-Regular.ttf`
+- Posts:
+  - Delete all posts under [`_posts`](_posts).
+- Images:
+  - Delete default (unused) images:
+    - `images/categories.png`
+    - `images/galaxy.jpg`
+    - `images/mobile-demo.png`
+    - `images/reverie-demo.png`
+    - `images/reverie-text.png`
+    - `images/search.png`
