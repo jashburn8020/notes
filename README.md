@@ -120,3 +120,9 @@
     - `images/reverie-demo.png`
     - `images/reverie-text.png`
     - `images/search.png`
+
+## Categories
+
+- Reintroduce the Categories page.
+  - [`_pages/categories.md`](_pages/categories.md) page already exists, but excluded in the template.
+  - Update [`_layouts/default.html`](_layouts/default.html) to add Categories to the nav bar.
