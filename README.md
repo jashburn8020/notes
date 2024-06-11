@@ -126,3 +126,13 @@
 - Reintroduce the Categories page.
   - [`_pages/categories.md`](_pages/categories.md) page already exists, but excluded in the template.
   - Update [`_layouts/default.html`](_layouts/default.html) to add Categories to the nav bar.
+
+## New Posts
+
+- Add new posts to [`_posts`](_posts) as `.md` files.
+- Posts' [front matter](https://github.com/jashburn8020/jekyll-tutorial?tab=readme-ov-file#front-matter):
+  - Use the `post` layout: `layout: post`.
+  - Set the `title` and `categories` variables.
+- Post file name format: `yyyy-mm-dd-title.md`
+  - Publish date, then a title, followed by an extension.
+  - E.g., [`2019-7-27-this-post-demonstrates-post-content-styles.md`](https://github.com/amitmerchant1990/reverie/blob/23b3723ccd0b40ecd1034e65b7e41795f68b92e4/_posts/2019-7-27-this-post-demonstrates-post-content-styles.md)
