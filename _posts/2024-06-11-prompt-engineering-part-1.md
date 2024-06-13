@@ -31,9 +31,7 @@ Note: See the _References_ section for the source.
 
 ## Taxonomy of Techniques
 
-- Taxonomy of prompt engineering techniques in LLMs, organised around application domains.
-
-<plantuml>
+<plantuml data-caption="Taxonomy of prompt engineering techniques in LLMs, organised around application domains" data-alt="Taxonomy of prompt engineering techniques in LLMs">
 @startmindmap
 
 <style>

@@ -222,6 +222,11 @@ p > img {
   margin: 0 auto;
 }
 
+img + figcaption {
+  text-align: center;
+  font-style: italic;
+}
+
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;

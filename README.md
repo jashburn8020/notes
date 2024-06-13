@@ -136,3 +136,19 @@
 - Post file name format: `yyyy-mm-dd-title.md`
   - Publish date, then a title, followed by an extension.
   - E.g., [`2019-7-27-this-post-demonstrates-post-content-styles.md`](https://github.com/amitmerchant1990/reverie/blob/23b3723ccd0b40ecd1034e65b7e41795f68b92e4/_posts/2019-7-27-this-post-demonstrates-post-content-styles.md)
+
+## Enhancements
+
+### PlantUML
+
+- Ability to display [PlantUML](https://plantuml.com/) diagrams on posts, where the diagrams' code is embedded directly in the posts and diagram images are generated on-the-fly.
+- Introduce custom `plantuml` tags to be used in posts.
+  - `plantuml` tags contain PlantUML diagram code.
+  - E.g., [`_posts/2024-06-11-prompt-engineering-part-1.md`](_posts/2024-06-11-prompt-engineering-part-1.md)
+  - Note the `plantuml` variable on the post's front matter.
+- Add JavaScript code in [`_includes/plantuml.html`](_includes/plantuml.html).
+  - Convert custom `plantuml` tags into standard HTML `figure`, `img`, and `figcaption` tags.
+  - JavaScript code is activated if the `plantuml` page variable is `true` on posts' front matter.
+  - JavaScript code uses [plantuml-encoder](https://www.jsdelivr.com/package/npm/plantuml-encoder)'s [`plantuml-encoder.min.js`](https://www.jsdelivr.com/package/npm/plantuml-encoder?tab=files&path=dist&slide=collection) to encode diagram code to be sent to PlantUML's [SVG service](https://plantuml.com/server).
+- Add the JavaScript code in the [`_layouts/post.html`](_layouts/post.html) layout: `{% include plantuml.html %}`
+- Update [`assets/style.scss`](assets/style.scss) to style the image caption: `img + figcaption`

@@ -3,13 +3,28 @@
 <script>
     const umlTags = document.querySelectorAll('plantuml');
     umlTags.forEach((umlTag) => {
-        // innerHTML gets a serialization of the nested child DOM elements, which returns solitary '>'
-        // (i.e., right-angle bracket that is not part of a tag) as '&gt;'. Therefore, we need to undo
-        // that. However, this also replaces any literal '&gt;' with '>'.
-        const plantuml = umlTag.innerHTML.replaceAll("&gt;", ">");
-        const imgTag = document.createElement('img');
+        // innerHTML gets a serialization of the nested child DOM elements, which returns angle
+        // brackets that are not part of a tag as their HTML entities. Therefore, we need to undo
+        // that. However, this also replaces any literal '&lt;' and '&gt;' with the corresponding
+        // angle brackets.
+        const plantuml = umlTag.innerHTML.replaceAll("&lt;", "<").replaceAll("&gt;", ">");
+
+        const imgTag = document.createElement("img");
         imgTag.src = "//www.plantuml.com/plantuml/svg/" + window.plantumlEncoder.encode(plantuml);
-        umlTag.parentNode.replaceChild(imgTag, umlTag);
+        if (umlTag.dataset.alt) {
+            imgTag.alt = umlTag.dataset.alt;
+        }
+
+        const figureTag = document.createElement("figure");
+        figureTag.appendChild(imgTag);
+
+        if (umlTag.dataset.caption) {
+            const captionTag = document.createElement("figcaption");
+            captionTag.appendChild(document.createTextNode(umlTag.dataset.caption));
+            figureTag.appendChild(captionTag);
+        }
+
+        umlTag.parentNode.replaceChild(figureTag, umlTag);
     });
 </script>
 {% endif %}
