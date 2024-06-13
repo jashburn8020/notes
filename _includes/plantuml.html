@@ -1,0 +1,15 @@
+{% if page.plantuml %}
+<script src="//cdn.jsdelivr.net/npm/plantuml-encoder@1/dist/plantuml-encoder.min.js"></script>
+<script>
+    const umlTags = document.querySelectorAll('plantuml');
+    umlTags.forEach((umlTag) => {
+        // innerHTML gets a serialization of the nested child DOM elements, which returns solitary '>'
+        // (i.e., right-angle bracket that is not part of a tag) as '&gt;'. Therefore, we need to undo
+        // that. However, this also replaces any literal '&gt;' with '>'.
+        const plantuml = umlTag.innerHTML.replaceAll("&gt;", ">");
+        const imgTag = document.createElement('img');
+        imgTag.src = "//www.plantuml.com/plantuml/svg/" + window.plantumlEncoder.encode(plantuml);
+        umlTag.parentNode.replaceChild(imgTag, umlTag);
+    });
+</script>
+{% endif %}
