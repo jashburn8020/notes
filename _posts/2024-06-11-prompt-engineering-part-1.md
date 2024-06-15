@@ -8,26 +8,26 @@ A brief introduction to prompt engineering and a taxonomy of techniques.
 
 This series of articles briefly describes the various techniques used in prompt engineering.
 
-Note: See the _References_ section for the source.
+_Note: The info on this page is mainly summarised from the references listed below, except where indicated otherwise._
 
 ## Introduction
 
-- Technique for enhancing the capabilities of pre-trained large language models (LLMs) and vision-language models (VLMs).
-- A mechanism to fine-tune model outputs through carefully crafted instructions, enables these models to excel across diverse tasks and domains.
-- Involves strategically designing task-specific instructions (prompts), to guide model output without altering parameters.
-  - **Prompt**: Natural language text describing the task that an AI should perform.
-- Different from traditional paradigms, where model retraining or extensive fine-tuning is often required for task-specific performance.
-- A prompt for a text-to-text language model can be:
-  - a **query**, e.g., "what is Fermat's little theorem?",
-  - a **command**, e.g., "write a poem about leaves falling", including assigning a **role** such as "act as a native French speaker", or
-  - a longer statement including **context**, **instructions**, and **conversation history**.
-- A prompt may include a few **examples** for which a model to learn.
-- With a text-to-image or a text-to-audio model, a typical prompt is a description of a desired output, e.g.,
-  - "a high-quality photo of an astronaut riding a horse"
-  - "lo-fi slow BPM electro chill with organic samples".
-- Prompting a text-to-image model
-  - may involve adding, removing, emphasizing and re-ordering words
-  - to achieve a desired subject, style, layout, lighting, and aesthetic.
+* Technique for enhancing the capabilities of pre-trained large language models (LLMs) and vision-language models (VLMs).
+* A mechanism to fine-tune model outputs through carefully crafted instructions, enables these models to excel across diverse tasks and domains.
+* Involves strategically designing task-specific instructions (prompts), to guide model output without altering parameters.
+  * **Prompt**: Natural language text describing the task that an AI should perform.
+* Different from traditional paradigms, where model retraining or extensive fine-tuning is often required for task-specific performance.
+* A prompt for a text-to-text language model can be:
+  * a **query**, e.g., "what is Fermat's little theorem?",
+  * a **command**, e.g., "write a poem about leaves falling", including assigning a **role** such as "act as a native French speaker", or
+  * a longer statement including **context**, **instructions**, and **conversation history**.
+* A prompt may include a few **examples** for which a model to learn.
+* With a text-to-image or a text-to-audio model, a typical prompt is a description of a desired output, e.g.,
+  * "a high-quality photo of an astronaut riding a horse"
+  * "lo-fi slow BPM electro chill with organic samples".
+* Prompting a text-to-image model
+  * may involve adding, removing, emphasizing and re-ordering words
+  * to achieve a desired subject, style, layout, lighting, and aesthetic.
 
 ## Taxonomy of Techniques
 
@@ -99,5 +99,5 @@ mindmapDiagram {
 
 ## References
 
-- Sahoo, P., Singh, A. K., Saha, S., Jain, V., Mondal, S., & Chadha, A. (2024). A Systematic Survey of Prompt Engineering in Large Language Models: Techniques and Applications. _arXiv preprint arXiv:2402.07927._
-- Wikipedia Contributors. (2024, June 5). _Prompt engineering._ Wikipedia; Wikimedia Foundation. <https://en.wikipedia.org/wiki/Prompt_engineering>
+* Sahoo, P., Singh, A. K., Saha, S., Jain, V., Mondal, S., & Chadha, A. (2024). A Systematic Survey of Prompt Engineering in Large Language Models: Techniques and Applications. _arXiv preprint arXiv:2402.07927._
+* Wikipedia Contributors. (2024, June 5). _Prompt engineering._ Wikipedia; Wikimedia Foundation. <https://en.wikipedia.org/wiki/Prompt_engineering>
