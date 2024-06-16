@@ -2,11 +2,12 @@
 layout: post
 title: Prompt Engineering, Part 2 - New Tasks Without Extensive Training
 categories: ai
+published: true
 plantuml: true
 ---
 Prompt engineering techniques for new tasks without the need for extensive training for the model.
 
-<plantuml data-caption="Prompt engineering techniques for new tasks without extensive training" data-alt="Zero-Shot and Few-Shot techniques for new tasks without extensive training">
+<plantuml data-caption="Prompt engineering techniques for new tasks without extensive training (Sahoo et al, 2024)" data-alt="Zero-Shot and Few-Shot techniques for new tasks without extensive training">
 @startmindmap
 
 <style>
@@ -171,5 +172,5 @@ A: The answer is False.
 
 * Sahoo, P., Singh, A. K., Saha, S., Jain, V., Mondal, S., & Chadha, A. (2024). A Systematic Survey of Prompt Engineering in Large Language Models: Techniques and Applications. _arXiv preprint arXiv:2402.07927._
 * _Few-Shot Prompting – Nextra._ (2023). Promptingguide.ai. <https://www.promptingguide.ai/techniques/fewshot‌>
-* OpenAI. (2024). ChatGPT (Apr 29 version) [Large language model]. <https://chat.openai.com/chat>
+* OpenAI. (2024). _ChatGPT_ (Apr 29 version) [Large language model]. <https://chat.openai.com/chat>
 * Google AI. (2024). _Gemini_ (May 1 version) [Large language model]. <https://gemini.google.com/app>

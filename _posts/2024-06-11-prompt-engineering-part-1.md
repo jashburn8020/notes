@@ -2,6 +2,7 @@
 layout: post
 title: Prompt Engineering, Part 1 - Introduction
 categories: ai
+published: true
 plantuml: true
 ---
 A brief introduction to prompt engineering and a taxonomy of techniques.
@@ -31,7 +32,7 @@ _Note: The info on this page is mainly summarised from the references listed bel
 
 ## Taxonomy of Techniques
 
-<plantuml data-caption="Taxonomy of prompt engineering techniques in LLMs, organised around application domains" data-alt="Taxonomy of prompt engineering techniques in LLMs">
+<plantuml data-caption="Taxonomy of prompt engineering techniques in LLMs, organised around application domains (Sahoo et al, 2024)" data-alt="Taxonomy of prompt engineering techniques in LLMs">
 @startmindmap
 
 <style>
