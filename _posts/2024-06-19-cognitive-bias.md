@@ -73,7 +73,7 @@ _Note: The information on this page is mainly summarised from the references lis
 
 | Addressing the problem | Biases |
 | --- | --- |
-|  We notice things that are already primed in memory or repeated often | Availability heuristic, Attentional bias, Illusory truth effect, Mere exposure effect, Context effect, Cue-dependent forgetting, Mood-congruent memory bias, Frequency illusion, Baader-Meinhof Phenomenon, Empathy gap |
+|  We notice things that are already primed in memory or repeated often | [Availability heuristic]({{ site.baseurl }}{% post_url 2024-06-20-availability-heuristic %}), Attentional bias, Illusory truth effect, Mere exposure effect, Context effect, Cue-dependent forgetting, Mood-congruent memory bias, Frequency illusion, Baader-Meinhof Phenomenon, Empathy gap |
 |  Bizarre, funny, visually-striking, or anthropomorphic things stick out more | Bizarreness effect, Humor effect, Von Restorff effect, Negativity bias, Publication bias, Omission bias |
 |  We notice when something has changed | Anchoring, Contrast effect, Focusing effect, Framing effect, Weber–Fechner law, Distinction bias |
 |  We are drawn to details that confirm our own existing beliefs | Confirmation bias, Congruence bias, Post-purchase rationalization, Choice-supportive bias, Selective perception, Observer-expectancy effect, Experimenter’s bias, Observer effect, Expectation bias, Ostrich effect, Subjective validation, Continued influence effect, Semmelweis reflex, Bucket error, Law of narrative gravity |
