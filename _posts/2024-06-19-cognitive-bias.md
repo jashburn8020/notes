@@ -64,6 +64,7 @@ _Note: The information on this page is mainly summarised from the references lis
 
 * Biases in this section are categorised in terms of the general problems that they attempt to address. (Benson, 2016)
   * This categorisation is mainly for ease of remembering.
+  * See also: [Cognitive Bias Codex](https://upload.wikimedia.org/wikipedia/commons/1/18/Cognitive_Bias_Codex_-_180%2B_biases%2C_designed_by_John_Manoogian_III_%28jm3%29.jpg)
 
 **Problem 1: Too much information**
 
