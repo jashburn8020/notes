@@ -120,7 +120,7 @@ _Note: The information on this page is mainly summarised from the references lis
 ## References
 
 * Wikipedia contributors. (2024, May 23). _Availability heuristic_. Wikipedia. <https://en.wikipedia.org/wiki/Availability_heuristic>
-* Pilat, D., & Krastev, S. (2024, May 21). _Why do we tend to think that things that happened recently are more likely to happen again?_. <https://thedecisionlab.com/biases/availability-heuristic>
+* Pilat, D., & Krastev, S. (2024, May 21). _Why do we tend to think that things that happened recently are more likely to happen again?_. The Decision Lab. <https://thedecisionlab.com/biases/availability-heuristic>
 * Perry, E. (2021, October 4). _The Cognitive Biases Caused by the Availability Heuristic_. Betterup.com. <https://www.betterup.com/blog/the-availability-heuristic>
 * Cherry, K. (2023, September 5). _What Is the Availability Heuristic?_. Verywell Mind. <https://www.verywellmind.com/availability-heuristic-2794824>
 * Buric, R. (2022, September 15). _Availability Heuristic - Everything You Need to Know_. InsideBE. <https://insidebe.com/articles/availability-heuristic/>
