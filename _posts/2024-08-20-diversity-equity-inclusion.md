@@ -75,6 +75,42 @@ _Note: The information on this page is mainly summarised from the references lis
     * Teams that also include a wide range of ages and different geographic locations make better business decisions 87% of the time.
   * Decisions made and executed by diverse teams delivered 60% better results. (Larson, 2017)
 
+## Criticisms
+
+* Green and Hand (2021) revisited McKinsey's analysis using more recent data for US S&P 500 firms.
+  * Found statistically insignificant relations between McKinsey's inverse normalised Herfindahl-Hirschman measures of executive racial/ethnic diversity and various financial metrics.
+  * Inverse normalised Herfindahl-Hirschman index: A measure of concentration or diversity -- higher value indicates more diversity (lower concentration).
+* Dwyer et al. (2003) examined the influence of gender diversity in management on firm performance.
+  * Studies of diversity's impact on performance at the top management team level have reported mixed and often contradictory results.
+    * Suggesting the influence of other contextual variables on this relationship.
+    * Diversity's positive influences (gender diversity in particular) may be more fully realised when examined not only across senior-level executives who formulate strategy but also across midlevel managers who implement strategy.
+  * Gender diversity's effects at the management level is moderated by:
+    * the firm's growth/strategic orientation,
+    * the organisational culture in which it resides, and/or
+    * the multivariate interaction among these variables.
+  * The potential benefits of gender diversity such as novel insights, perspectives, creativity, and experience appear to foster and support expansion into new markets.
+  * Some support was found for the interaction between gender diversity and the _clan_ culture type in relation to firm performance.
+    * (4 main organisational culture types within the Competing Values Framework: Clan, Adhocracy, Market, and Hierarchy.)
+    * The potentially beneficial aspects of gender diversity appear to require a more nurturing, employee-focused setting before they can be fully realised.
+    * The clan's core values of teamwork, participation, and cohesiveness appear to provide an environment that fosters the varied skills and abilities of a diverse workforce.
+    * This collectivist setting may be necessary to prevent the formation of in-groups, polarisation, and discrimination predicted by social identity theory.
+      * Social identity theory: Individuals derive a portion of their self-concept from their membership in social groups.
+        * Social identity groups can give a sense of belonging, purpose, self-worth, and identity.
+        * People have a natural inclination to perceive their in-group in a positive light while being neutral or even negative towards out-groups. (McLeod, 2023)
+    * Gender diversity did _not_ provide benefits to firms with an _adhocracy_ culture type.
+      * Clan culture type focuses inward on the firm and employees, placing high value on integration, teamwork, and other internal processes.
+      * Adhocracy culture type has a results-oriented external focus that places priority on competition and interaction with the environment, and relatively lower level of employee-focused orientation.
+        * Relatively less supportive environment that potentially dampens an atmosphere of open-minded consideration.
+      * Competition -- studies have found that women are more cooperative than men; men, conversely, embrace competitive individualism.
+        * Contrasting styles may tend to hinder performance, particularly within an adhocracy culture.
+    * Firms planning to increase their current level of gender diversity may be advised to cultivate a set of organisational values that focus closely on:
+      * employee affiliation and consensus-building,
+      * paternal leadership styles, and
+      * strategic emphases that are internally oriented and informal.
+  * Notes on the study:
+    * Set in a single industry and, as such, the generalisation of results to other settings should be exercised with caution.
+    * Although relationships between various interaction variables and firm performance were found, no causal relationships should be inferred.
+    * The study should be extended to include other visible aspects of cultural diversity such as race and age.
 
 ## References
 
@@ -88,3 +124,6 @@ _Note: The information on this page is mainly summarised from the references lis
 * Hewlett, S. A., Marshall, M., & Sherbin, L. (2013, December). How diversity can drive innovation. Harvard Business Review. <https://hbr.org/2013/12/how-diversity-can-drive-innovation>
 * Smith, C., & Turner, S. (2015). _The Radical Transformation of Diversity and Inclusion The Millennial Influence for inclusion_. <https://www2.deloitte.com/content/dam/Deloitte/us/Documents/about-deloitte/us-inclus-millennial-influence-120215.pdf>
 * Larson, E. (2017, September 21). New Research: Diversity + Inclusion = Better Decision Making At Work. _Forbes_. <https://www.forbes.com/sites/eriklarson/2017/09/21/new-research-diversity-inclusion-better-decision-making-at-work/#680820c94cbf>
+* Green, J., & Hand, J. R. M. (2021). Diversity matters/delivers/wins revisited in S&P 500® firms. _SSRN Electronic Journal_. <https://doi.org/10.2139/ssrn.3849562>
+* Dwyer, S., Richard, O. C., & Chadwick, K. (2003). Gender diversity in management and firm performance: the influence of growth orientation and organizational culture. _Journal of Business Research, 56_(12), 1009–1019. <https://doi.org/10.1016/s0148-2963(01)00329-0>
+* McLeod, S. (2023, October 5). Social Identity Theory In Psychology (Tajfel & Turner, 1979). _Simply Psychology_. <https://www.simplypsychology.org/social-identity-theory.html>
