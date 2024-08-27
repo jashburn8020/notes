@@ -89,7 +89,7 @@ _Note: The information on this page is mainly summarised from the references lis
     * the organisational culture in which it resides, and/or
     * the multivariate interaction among these variables.
   * The potential benefits of gender diversity such as novel insights, perspectives, creativity, and experience appear to foster and support expansion into new markets.
-  * Some support was found for the interaction between gender diversity and the _clan_ culture type in relation to firm performance.
+  * Some support was found for the interaction between gender diversity and the **clan culture type** in relation to firm performance.
     * (4 main organisational culture types within the Competing Values Framework: Clan, Adhocracy, Market, and Hierarchy.)
     * The potentially beneficial aspects of gender diversity appear to require a more nurturing, employee-focused setting before they can be fully realised.
     * The clan's core values of teamwork, participation, and cohesiveness appear to provide an environment that fosters the varied skills and abilities of a diverse workforce.
@@ -101,7 +101,7 @@ _Note: The information on this page is mainly summarised from the references lis
       * Clan culture type focuses inward on the firm and employees, placing high value on integration, teamwork, and other internal processes.
       * Adhocracy culture type has a results-oriented external focus that places priority on competition and interaction with the environment, and relatively lower level of employee-focused orientation.
         * Relatively less supportive environment that potentially dampens an atmosphere of open-minded consideration.
-      * Competition -- studies have found that women are more cooperative than men; men, conversely, embrace competitive individualism.
+      * Competition: Studies have found that women are more cooperative than men; men, conversely, embrace competitive individualism.
         * Contrasting styles may tend to hinder performance, particularly within an adhocracy culture.
     * Firms planning to increase their current level of gender diversity may be advised to cultivate a set of organisational values that focus closely on:
       * employee affiliation and consensus-building,
@@ -111,6 +111,38 @@ _Note: The information on this page is mainly summarised from the references lis
     * Set in a single industry and, as such, the generalisation of results to other settings should be exercised with caution.
     * Although relationships between various interaction variables and firm performance were found, no causal relationships should be inferred.
     * The study should be extended to include other visible aspects of cultural diversity such as race and age.
+* Kearney and Gebert (2009) examined **transformational leadership** as a moderator of the relationship of age, nationality, and educational background diversity with team outcomes.
+  * Nationality and educational diversity were positively related to team performance when levels of transformational leadership were high.
+    * These relationships were nonsignificant when transformational leadership was low.
+  * Age diversity was not related to team performance when transformational leadership was high.
+    * It was negatively related to team performance when transformational leadership was low.
+  * 2 mediated moderation effects help explain these findings.
+    * Transformational leadership moderated the relationship of the 3 examined diversity dimensions with the elaboration of task-relevant information, which in turn was positively associated with team performance.
+    * Moreover, transformational leadership moderated the relationship of the 3 diversity types with collective team identification, which in turn was positively related to the elaboration of task-relevant information.
+  * Concepts:
+    * **Transformational leadership** -- consists of 4 main components:
+      * _Intellectual Stimulation_: Emphasising new experiences, new opportunities (to grow and learn), and innovative ways of thinking.
+      * _Individual Consideration_: Transformational leaders are concerned with the professional development of employees and foster positive relationships with them -- keeping lines of communication open, attending to the individual needs of employees, mentoring them and recognising each person's unique contributions.
+      * _Inspirational Motivation_: Transformational leaders give employees a strong sense of purpose and set high standards and expectations for achievement by setting the high standards and expectations for themselves and then modelling it for their employees and the organisation as a whole.
+      * _Idealised Influence_: Transformational leaders serve as role models for employees in every way, that also include modelling ethical and socially desirable behaviour, maintaining a dedication to work goals, and exhibiting enthusiasm about company strategy. (Jenniferd, 2022)
+    * **Elaboration of task-relevant information**: The exchange, discussion, and integration of ideas, knowledge, and insights pertaining to assigned tasks.
+    * **Collective team identification**: The emotional significance that individuals attach to their membership in a given team.
+    * **Mediation**: How an effect from an independent variable (IV) to a dependent variable (DV) is mediated.
+      * The mediator is a third variable which is influenced by the IV and in turn influences the DV.
+    * **Moderation**: What affects the strength (and direction, if any) of an effect.
+      * The moderator is a third variable that affects the strength of the effect of the IV on the DV.
+    * **Mediated moderation**:
+      * The strength of the relationship between an IV and a DV depends on a moderator variable (MOD).
+      * A mediated moderation exists if this moderator effect is applied to an indirect path from the IV to the DV via a mediator (MED).
+      * So there is an indirect effect, the strength of which depends on the moderator and therefore the strength of the overall effect depends on the moderator. (Regorz, 2019)
+      * In this study:
+        * Transformational leadership acts as a MOD.
+          * It influences the strength of the relationship between team diversity (IV) and team performance (DV).
+        * The moderating effect of transformational leadership on the relationship between diversity and performance is mediated by:
+          * _Elaboration of task-relevant information_:
+            * Transformational leadership influences how well the team discusses and integrates diverse perspectives, which in turn affects performance.
+          * _Collective team identification_:
+            * Transformational leadership also impacts how strongly team members identify with the team, which then influences the extent of information elaboration and ultimately, performance. (OpenAI, 2024)
 
 ## References
 
@@ -127,3 +159,7 @@ _Note: The information on this page is mainly summarised from the references lis
 * Green, J., & Hand, J. R. M. (2021). Diversity matters/delivers/wins revisited in S&P 500® firms. _SSRN Electronic Journal_. <https://doi.org/10.2139/ssrn.3849562>
 * Dwyer, S., Richard, O. C., & Chadwick, K. (2003). Gender diversity in management and firm performance: the influence of growth orientation and organizational culture. _Journal of Business Research, 56_(12), 1009–1019. <https://doi.org/10.1016/s0148-2963(01)00329-0>
 * McLeod, S. (2023, October 5). Social Identity Theory In Psychology (Tajfel & Turner, 1979). _Simply Psychology_. <https://www.simplypsychology.org/social-identity-theory.html>
+* Kearney, E., & Gebert, D. (2009). Managing diversity and enhancing team outcomes: The promise of transformational leadership. _Journal of Applied Psychology, 94_(1), 77–89. <https://doi.org/10.1037/a0013077>
+* Jenniferd. (2022, July 1). _The 4 "I's" of transformational leadership_. Michigan State University. <https://www.michiganstateuniversityonline.com/resources/leadership/4-is-of-transformational-leadership/>
+* Regorz, A. (2019). _Moderated Mediation or Mediated Moderation_. Regorz-Statistik.de. <http://www.regorz-statistik.de/en/moderated_mediation_or_mediated_moderation.html>
+* OpenAI. (2024). _ChatGPT_ [Large language model]. <https://chat.openai.com/chat>‌
