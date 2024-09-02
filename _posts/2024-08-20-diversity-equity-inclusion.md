@@ -117,10 +117,10 @@ _Note: The information on this page is mainly summarised from the references lis
   * Age diversity was not related to team performance when transformational leadership was high.
     * It was negatively related to team performance when transformational leadership was low.
   * 2 mediated moderation effects help explain these findings.
-    * Transformational leadership moderated the relationship of the 3 examined diversity dimensions with the elaboration of task-relevant information, which in turn was positively associated with team performance.
-    * Moreover, transformational leadership moderated the relationship of the 3 diversity types with collective team identification, which in turn was positively related to the elaboration of task-relevant information.
+    * Transformational leadership moderated the relationship of the 3 examined diversity dimensions with the _elaboration of task-relevant information_, which in turn was positively associated with team performance.
+    * Moreover, transformational leadership moderated the relationship of the 3 diversity types with _collective team identification_, which in turn was positively related to the elaboration of task-relevant information.
   * Concepts:
-    * **Transformational leadership** -- consists of 4 main components:
+    * **Transformational leadership** -- consists of 4 main components (the 4 "I's"):
       * _Intellectual Stimulation_: Emphasising new experiences, new opportunities (to grow and learn), and innovative ways of thinking.
       * _Individual Consideration_: Transformational leaders are concerned with the professional development of employees and foster positive relationships with them -- keeping lines of communication open, attending to the individual needs of employees, mentoring them and recognising each person's unique contributions.
       * _Inspirational Motivation_: Transformational leaders give employees a strong sense of purpose and set high standards and expectations for achievement by setting the high standards and expectations for themselves and then modelling it for their employees and the organisation as a whole.
@@ -143,6 +143,33 @@ _Note: The information on this page is mainly summarised from the references lis
             * Transformational leadership influences how well the team discusses and integrates diverse perspectives, which in turn affects performance.
           * _Collective team identification_:
             * Transformational leadership also impacts how strongly team members identify with the team, which then influences the extent of information elaboration and ultimately, performance. (OpenAI, 2024)
+* Richard et al. (2004) evaluated the relationships between racial and gender diversity in management and firm performance within the context of firm-level entrepreneurial orientation.
+  * Their study revealed that innovativeness positively and risk taking negatively moderated nonlinear relationship patterns for both racial and gender heterogeneity.
+  * In firms with highly innovative strategic postures, both low and high management group heterogeneity were associated with higher productivity than was moderate heterogeneity.
+    * This effect was strongest for racial diversity.
+  * In firms characterised by high levels of risk taking, they observed an inverted U-shaped relationship between management group heterogeneity and productivity, with moderately heterogeneous management groups exhibiting better performance than other management groups.
+    * This effect was strongest for gender diversity.
+    * The results suggest that totally homogeneous groups may not thrive in an environment requiring decision speed and aggressive competitive behaviour.
+    * As diversity exceeds moderate levels and continues to increase, cognitive biasing and communication problems may increase, which leads to reduced cooperation and increased conflict.
+  * Concepts:
+    * **Entrepreneurial orientation**: A firm-level construct that is closely linked to strategic management and the strategic decision making process.
+      * Propensity to act autonomously, innovate, take risks, and act proactively when confronted with market opportunities.
+      * An entrepreneurial orientation is not created or imposed by top management, but reflects the strategic posture as exhibited by multiple layers of management.
+      * This research focused on the 3 most commonly cited entrepreneurial orientation dimensions: innovativeness, risk taking, and proactiveness.
+    * **Innovativeness**: Propensity of a firm to actively support new ideas, novelty, experimentation, and creative solutions in pursuit of a competitive advantage.
+      * An innovative strategic posture is thought to be linked to firm performance because it increases the chances that a firm will realise first-mover advantages and capitalise on emerging market opportunities.
+    * **Risk-taking**: Propensity to take business-related chances with regard to strategic actions in the face of uncertainty. **Proactiveness**: Propensity to take the initiative to compete aggressively with other firms.
+      * A strategic posture emphasising risk taking and proactiveness suggests that a management group will need high levels of trust and interpersonal communication.
+      * Members of homogeneous management groups:
+        * May have fewer cognitive and interpersonal barriers to overcome in reaching agreement on aggressive and risky strategies.
+        * But may lack the diverse cognitive perspectives needed to recognise strategic opportunities and/or simultaneously consider alternatives, capacities that are essential for decision speed.
+      * High levels of diversity:
+        * Reduce agreement-seeking behaviours and social cohesion in the context of strategic decision making.
+        * Diverse decision-making groups are slower to reach consensus than homogeneous groups.
+  * Notes:
+    * Given the use of a single industry (financial sector, U.S. banks), caution should be used in generalising beyond the sector.
+* High diversity reduces agreement seeking, social cohesion, and decision speed (Ferrier, 2001)
+* Diverse decision-making groups are slower to reach consensus than homogeneous groups (Watson et al., 1993)
 
 ## References
 
@@ -163,3 +190,4 @@ _Note: The information on this page is mainly summarised from the references lis
 * Jenniferd. (2022, July 1). _The 4 "I's" of transformational leadership_. Michigan State University. <https://www.michiganstateuniversityonline.com/resources/leadership/4-is-of-transformational-leadership/>
 * Regorz, A. (2019). _Moderated Mediation or Mediated Moderation_. Regorz-Statistik.de. <http://www.regorz-statistik.de/en/moderated_mediation_or_mediated_moderation.html>
 * OpenAI. (2024). _ChatGPT_ [Large language model]. <https://chat.openai.com/chat>‌
+* Richard, O. C., Barnett, T., Dwyer, S., & Chadwick, K. (2004). Cultural Diversity in Management, Firm Performance, and the Moderating Role of Entrepreneurial Orientation Dimensions. _Academy of Management Journal, 47_(2), 255–266. <https://doi.org/10.2307/20159576>
