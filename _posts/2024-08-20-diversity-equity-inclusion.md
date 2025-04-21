@@ -168,8 +168,22 @@ _Note: The information on this page is mainly summarised from the references lis
         * Diverse decision-making groups are slower to reach consensus than homogeneous groups.
   * Notes:
     * Given the use of a single industry (financial sector, U.S. banks), caution should be used in generalising beyond the sector.
+* Risberg and Corvellec (2022) proposed a different approach to understand the varying outcomes of managing diversity.
+  * Understanding diversity management in terms of success and failure is insufficient.
+    * Reduces diversity management to a dichotomy of achieving or not achieving goals.
+  * Failure in implementing organisational change is not an end state or something that must be corrected, resolved, or avoided at all costs.
+    * It is part of a process of adaptation that regenerates change.
+  * 
+
 * High diversity reduces agreement seeking, social cohesion, and decision speed (Ferrier, 2001)
 * Diverse decision-making groups are slower to reach consensus than homogeneous groups (Watson et al., 1993)
+* Ferdman, B. M. (2017). Paradoxes of Inclusion: Understanding and Managing the Tensions of Diversity and Multiculturalism. The Journal of Applied Behavioral Science, 53(2), 235-263. https://doi.org/10.1177/0021886317702608
+* Dobbin et al. (2015) demonstrate that certain types of diversity programs increase the number of minority groups in the organization, while others decrease them.
+  * Dobbin, F., Schrage, D., & Kalev, A. (2015). Rage against the Iron Cage: The Varied Effects of Bureaucratic Personnel Reforms on Diversity. American Sociological Review, 80(5), 1014-1044. https://doi.org/10.1177/0003122415596416
+* Dobbin and Kalev (2016) point out that litigation avoidance tools, such as training, employment testing, and grievance systems, reinforce bias and inequality.
+  * They claim that to achieve effective diversity management, organizations need to build structures where managers are made responsible and accountable.
+  * Dobbin, F., & Kalev, A. (2016). Why diversity programs fail and what works better. Harvard Business Review, 94(7-8), 52-60.
+* 
 
 ## References
 
@@ -191,3 +205,4 @@ _Note: The information on this page is mainly summarised from the references lis
 * Regorz, A. (2019). _Moderated Mediation or Mediated Moderation_. Regorz-Statistik.de. <http://www.regorz-statistik.de/en/moderated_mediation_or_mediated_moderation.html>
 * OpenAI. (2024). _ChatGPT_ [Large language model]. <https://chat.openai.com/chat>‌
 * Richard, O. C., Barnett, T., Dwyer, S., & Chadwick, K. (2004). Cultural Diversity in Management, Firm Performance, and the Moderating Role of Entrepreneurial Orientation Dimensions. _Academy of Management Journal, 47_(2), 255–266. <https://doi.org/10.2307/20159576>
+* Risberg, A., & Corvellec, H. (2022). The significance of trying: How organizational members meet the ambiguities of diversity. _Gender Work and Organization, 29_(6), 1849–1867. <https://doi.org/10.1111/gwao.12883>
