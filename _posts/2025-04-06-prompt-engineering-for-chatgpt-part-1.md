@@ -6,9 +6,27 @@ published: true
 plantuml: false
 ---
 
-Summary of the Prompt Engineering for ChatGPT course at <https://www.coursera.org/learn/prompt-engineering/>, part 1 of 4: What are Prompts, Intro to Prompt Patterns, and Prompts, Conversations, and New Information.
+Summary of the [Prompt Engineering for ChatGPT course at Coursera](https://www.coursera.org/learn/prompt-engineering/), part 1 of 4, covering an introduction to prompt patterns, the Persona Pattern, and root prompts.
 
-This summary is mostly generated using ChatGPT and Gemini based on the course transcript, while the examples are mostly copied from the course itself.
+* **Persona Pattern**
+  * To get the LLM to adopt a certain persona or role.
+  * `Adopt the persona of a fitness trainer. When I ask you questions, respond as if you are an expert in this field.`
+
+_The following summary is mostly generated using ChatGPT and Gemini based on the course transcript, while the examples are mostly copied from the course itself._
+
+---
+
+* [What are Prompts?](#what-are-prompts)
+  * [What is a Prompt?](#what-is-a-prompt)
+  * [Intuition Behind Prompts](#intuition-behind-prompts)
+  * [Everyone Can Program with Prompts](#everyone-can-program-with-prompts)
+* [Intro to Prompt Patterns](#intro-to-prompt-patterns)
+  * [Prompt Patterns](#prompt-patterns)
+  * [The Persona Pattern](#the-persona-pattern)
+* [Prompts, Conversations, and New Information](#prompts-conversations-and-new-information)
+  * [Prompt Size Limitations](#prompt-size-limitations)
+  * [Prompts are a Tool for Repeated Use](#prompts-are-a-tool-for-repeated-use)
+  * [Root Prompts](#root-prompts)
 
 ## What are Prompts?
 
@@ -38,16 +56,16 @@ This summary is mostly generated using ChatGPT and Gemini based on the course tr
   * By prompting the model with "`From now on, suggest better versions of my questions`," future interactions are shaped by this instruction, showing how prompts can persist across time.
 
 ```text
-User:
+> User
 From now on, when I ask a question, suggest a better version of my question and ask me if I would like to use it.
 
-ChatGPT:
+> ChatGPT
 [...]
 
-User:
+> User
 What color is the sky?
 
-ChatGPT:
+> ChatGPT
 A possible better version of your question could be: "What is the scientific explanation for the blue color of the sky during the daytime?"
 
 Would you like me to use this version instead?
@@ -108,44 +126,44 @@ Would you like me to use this version instead?
   * This allows a user to create very specific outputs from the LLM, and to control the LLM in a very precise way.
 
 ```text
-User:
+> User
 Whenever you generate output, turn it into a comma separate value list.
 
-ChatGPT:
+> ChatGPT
 [...]
 
-User:
+> User
 My name is Jules White and I am teaching a course on Prompt Engineering.
 
-ChatGPT:
+> ChatGPT
 [...]
 Name, Course
 Jules White, Prompt Engineering
 
-User:
+> User
 From now on, the columns of the comma separated value list should be NAME, COURSE, ROLE
 
-ChatGPT:
+> ChatGPT
 [...]
 
-User:
+> User
 My name is Jules White and I am teaching a course on Prompt Engineering.
 
-ChatGPT:
+> ChatGPT
 [...]
 NAME, COURSE, ROLE
 Jules White, Prompt Engineering, Teacher
 
-User:
+> User
 In addition to whatever I type in, generate additional examples that fit the format of the CSV that I have asked you to produce.
 
-ChatGPT:
+> ChatGPT
 [...]
 
-User:
+> User
 My name is Jules White and I am teaching a course on Prompt Engineering.
 
-ChatGPT:
+> ChatGPT
 [...]
 NAME, COURSE, ROLE
 Jules White, Prompt Engineering, Teacher
@@ -206,7 +224,7 @@ Brandon Lee, Physics, Student
   * Generating creative content from specific character perspectives.
   * Creating virtual panels for diverse viewpoints.
   * Guiding the overall tone of a conversation with the LLM.
-* **Key Insight:** The persona pattern is a powerful tool for leveraging the LLM's inherent understanding of roles and perspectives.
+* **Key Insight:** The persona pattern leverages the LLM's inherent understanding of roles and perspectives.
   * It allows users to bypass the need for detailed output formatting instructions by simply invoking a relevant persona.
   * This pattern demonstrates the LLM's ability to not only generate text but also to embody and simulate different cognitive frameworks.
   * Effectively, this pattern allows the user to have the LLM take on the persona that would be best suited to provide the desired output.
@@ -287,7 +305,7 @@ Brandon Lee, Physics, Student
     * Generating G-code for 3D printing.
     * Designing circuit diagrams.
     * Generating Arduino code.
-    * Then the LLM is asked to quiz the user on the information that was provided.
+  * Then the LLM is asked to quiz the user on the information that was provided.
   * This demonstrates how a conversation can lead to complex outputs and problem-solving.
 * Problem-Solving in Conversations:
   * Conversations allow for navigating roadblocks and exploring alternative solutions.

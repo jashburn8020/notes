@@ -6,9 +6,46 @@ published: true
 plantuml: false
 ---
 
-Summary of the Prompt Engineering for ChatGPT course at <https://www.coursera.org/learn/prompt-engineering/>, part 2 of 4: Prompt Patterns I, and Few-Shot Examples.
+Summary of the [Prompt Engineering for ChatGPT course at Coursera](https://www.coursera.org/learn/prompt-engineering/), part 2 of 4, covering Question Refinement Pattern, Cognitive Verifier Pattern, Audience Persona Pattern, Flipped Interaction Pattern, Few-Shot Prompting, Chain of Thought Prompting, and ReAct Prompting.
 
-This summary is mostly generated using ChatGPT and Gemini based on the course transcript, while the examples are mostly copied from the course itself.
+* **Question Refinement Pattern**
+  * To get the LLM to refine or clarify a question before answering it.
+  * `Whenever I ask a question, ask me additional questions to clarify what I'm asking before you provide an answer.`
+* **Cognitive Verifier Pattern**
+  * To get the LLM to subdivide a question into additional questions that can be used to provide a better answer to the original question.
+  * `When you are asked a question, follow these rules: Generate a number of additional questions that would help more accurately answer the question. Combine the answers to the individual questions to produce the final answer to the overall question.`
+* **Audience Persona Pattern**
+  * To instruct the LLM to tailor its output to a specific audience by defining the recipient's background and understanding
+  * `Explain large language models to someone with no computer science background.`
+  * `Explain the latest advancements in large language models to someone with a PhD in Artificial Intelligence.`
+* **Flipped Interaction Pattern**
+  * To reverse the typical interaction flow by having the LLM ask questions and the user provide answers.
+  * `Ask me questions about fitness goals until you have enough information to suggest a strength training regime for me. When you have enough information, show me the strength training regime.`
+  * `I would like you to ask me questions to help me diagnose a problem with my Internet. Ask me questions until you have enough information to identify the two most likely causes. Ask me one question at a time. Ask me the first question.`
+* **Few-Shot Prompting**
+  * To guide the LLM to perform a task or follow a specific pattern by providing a small number of input-output examples within the prompt.
+* **Chain of Thought Prompting**
+  * To elicit more accurate and reliable answers by prompting the LLM to explicitly show its reasoning process step-by-step before presenting the final answer.
+* **ReAct Prompting**
+  * To enhance the LLM's ability to solve tasks by prompting it to interleave reasoning steps with actions, such as using external tools or looking up information; building upon Chain of Thought by explicitly encouraging the model to identify when and how to interact with its environment.
+
+_The following summary is mostly generated using ChatGPT and Gemini based on the course transcript, while the examples are mostly copied from the course itself._
+
+---
+
+* [Prompt Patterns I](#prompt-patterns-i)
+  * [Question Refinement Pattern](#question-refinement-pattern)
+  * [Cognitive Verifier Pattern](#cognitive-verifier-pattern)
+  * [Audience Persona Pattern](#audience-persona-pattern)
+  * [Flipped Interaction Pattern](#flipped-interaction-pattern)
+* [Few-Shot Examples](#few-shot-examples)
+  * [Few-Shot Prompting](#few-shot-prompting)
+  * [Few-shot Examples for Actions](#few-shot-examples-for-actions)
+  * [Few-Shot Examples with Intermediate Steps](#few-shot-examples-with-intermediate-steps)
+  * [Writing Effective Few-Shot Examples](#writing-effective-few-shot-examples)
+  * [Chain of Thought Prompting](#chain-of-thought-prompting)
+  * [ReAct Prompting](#react-prompting)
+  * [Using Large Language Models to Grade Each Other](#using-large-language-models-to-grade-each-other)
 
 ## Prompt Patterns I
 
@@ -99,7 +136,7 @@ This summary is mostly generated using ChatGPT and Gemini based on the course tr
     * `Christopher Columbus` (using historical context and analogies).
     * `A second grader` (using playful language and relatable examples).
     * `A person that only understands maths` (providing a mathematical explanation).
-* Key Insight: The audience persona pattern allows users to leverage the LLM's adaptability to produce highly targeted and effective communication.
+* **Key Insight:** The audience persona pattern allows users to leverage the LLM's adaptability to produce highly targeted and effective communication.
   * By focusing on the recipient, users can achieve nuanced and appropriate outputs without extensive customisation.
   * This pattern highlights the LLM's ability to understand and cater to diverse audiences, making it a powerful tool for communication and education.
   * This pattern allows the LLM to become a communication tool that can be used by anyone, no matter their background.
@@ -131,33 +168,33 @@ This summary is mostly generated using ChatGPT and Gemini based on the course tr
   * This pattern is very useful for customer service applications, and for educational applications
 
 ```text
-User:
+> User
 Ask me questions about fitness goals until you have enough information to suggest a strength training regime for me. When you have enough information, show me the strength training regime.
 
 Ask me the first question.
 
-ChatGPT:
+> ChatGPT
 [...]
 1. What are your specific fitness goals? Are you looking to build muscle mass, increase strength, improve endurance, or achieve a specific athletic or aesthetic goal?
 
-User:
+> User
 I am looking to build explosive power and also help prevent patellar tendinopathy from doing jumps on a mountain bike.
 
-ChatGPT:
+> ChatGPT
 [...]
 2. Do you have any current or past injuries or medical conditions that may affect your ability to participate in strength training? Additionally, have you been diagnosed with patellar tendinopathy, or are you looking to prevent it proactively?
 
-User:
+> User
 My patellar tendinopathy comes and goes. I have an improving case of it right now in my left knee.
 
-ChatGPT:
+> ChatGPT
 [...]
 3. How many days per week can you dedicate to strength training, and how much time do you have available for each training session? Additionally, do you have access to a gym or fitness equipment, or will you be working out at home with limited equipment?
 
-User:
+> User
 I can work out 5 days per week for 30-45 mins at a time. I have a set of adjustable dumbbells. I would prefer to workout at home.
 
-ChatGPT:
+> ChatGPT
 [...]
 Warm-Up:
 - Start each workout with a 5-10 minute warm-up consisting of dynamic stretches and light cardiovascular exercises (e.g., jumping jacks, high knees, bodyweight squats).
@@ -209,7 +246,7 @@ Day 3: Plyometrics and Core
   * This can be used to quickly get the LLM to perform tasks that it has not been specifically trained to perform.
 
 ```text
-User:
+> User
 Input: The movie was good but a bit too long
 Sentiment: Neutral
 
@@ -222,13 +259,13 @@ Sentiment: Positive
 Input: I wasn't sure what to think of this new restaurant, the service was slow, but the dishes were pretty good
 Sentiment:
 
-ChatGPT:
+> ChatGPT
 Neutral
 
-User:
+> User
 I really hated this coffee, it was roasted too much and tasted burned
 
-ChatGPT:
+> ChatGPT
 Sentiment: Negative
 ```
 
@@ -260,7 +297,7 @@ Sentiment: Negative
   * This pattern allows the user to teach the LLM to perform very complex tasks, by providing it with examples.
 
 ```text
-User:
+> User
 Situation: I am travelling 60 miles per hour and I see the brake lights on the car in front of me come on
 Action: Brake
 
@@ -273,15 +310,15 @@ Action: Brake and swerve into shoulder
 Situation: I am backing out of a parking spot and I see the reverse lights illuminate on the car behind me
 Action:
 
-ChatGPT:
+> ChatGPT
 Stop and wait for the car to back out before proceeding.
 
-User:
+> User
 Provide more examples:
 
 Situation:
 
-ChatGPT:
+> ChatGPT
 You are driving in heavy rain and notice that the road is flooded ahead.
 Action: Slow down and cautiously drive through the flooded area, watching out for other vehicles and avoiding sudden movements or changes in direction.
 
@@ -315,7 +352,7 @@ Action: Dim your headlights to low beam to avoid blinding the oncoming driver.
   * Using clear, repeatable structures helps the model produce consistent and reliable multi-step responses.
 
 ```text
-User:
+> User
 Situation: I am travelling 60 miles per hour and I see the brake lights on the car in front of me come on
 Think: I need to slow down the car before I hit the car in front of me
 Action: Press foot on brake
@@ -333,17 +370,17 @@ Action: Let up on accelerator
 Situation: I am backing out of a parking spot and I see the reverse lights illuminate on the car behind me
 Action:
 
-ChatGPT:
+> ChatGPT
 Immediately stop backing up
 Think: I need to check my surroundings to make sure it's safe to continue backing up
 Action: Check mirrors and surroundings for any obstacles or pedestrians
 Think: It's safe to continue backing up
 Action: Continue backing up slowly and carefully while keeping an eye on surroundings
 
-User:
+> User
 Generate another example
 
-ChatGPT:
+> ChatGPT
 Situation: I am driving on a narrow winding road with several blind curves
 Think: I need to slow down and be cautious to avoid any potential collisions
 Action: Reduce speed and approach each curve with caution
@@ -374,7 +411,7 @@ Action: Resume normal speed while remaining alert for any potential hazards on t
   * Balancing clarity between instructions and examples to deliver accurate outputs.
 
 ```text
-User:
+> User
 Input: Brick
 Output: Hard
 Input: Pillow
@@ -382,10 +419,10 @@ Output: Soft
 Input: Car
 Output:
 
-ChatGPT:
+> ChatGPT
 Fast (or maybe "transportation")
 
-User:
+> User
 Object: Plane
 Speed: Fast
 Object: Worm
@@ -399,7 +436,7 @@ Speed: Fast
 Object: Ball
 Speed:
 
-ChatGPT:
+> ChatGPT
 Variable (it can be fast or slow depending on how it is thrown or kicked)
 ```
 
@@ -433,7 +470,9 @@ Variable (it can be fast or slow depending on how it is thrown or kicked)
 * See also: [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)
 
 ```text
-User:
+--- WITHOUT CoT ---
+
+> User
 Q: I have four bike racers start a race and travel an average of 30mph. They each race for 2hrs. Is the total number of miles ridden by all riders greater than 200?
 A: Answer - YES
 
@@ -443,10 +482,12 @@ A: Answer - NO
 Q: I am in a space ship without gravity. I have a cup with a needle in it. I move my foot on the bed, knocking over the cup onto the floor. I lift a book up and put it on a desk. Is anything on the floor?
 A: Answer - <ANSWER>
 
-ChatGPT:
+> ChatGPT
 A: Answer - YES. When the cup with the needle in it is knocked over onto the floor, both the cup and the needle will end up on the floor. In the absence of gravity, objects will not fall downward as they do on Earth, but they will still move in response to forces applied to them. In this case, the force applied by your foot knocking over the cup will cause the cup and the needle to move and come to rest on the floor. Lifting a book and putting it on a desk does not affect the position of the cup and the needle, so they will remain on the floor.
 
-User:
+--- WITH CoT ---
+
+> User
 Q: I have four bike racers start a race and travel an average of 30mph. They each race for 2hrs. Is the total number of miles ridden by all riders greater than 200?
 A: Reasoning - Each rider will ride 30mph * 2hrs = 60 miles. I have four riders. Therefore, the total number of miles ridden by the riders is 4 * 60 miles = 240 miles. Answer - YES
 
@@ -456,7 +497,7 @@ A: Reasoning - Each group takes 47s + 67s = 114s to be ready to race. In order t
 Q: I am in a space ship without gravity. I have a cup with a needle in it. I move my foot on the bed, knocking over the cup onto the floor. I lift a book up and put it on a desk. Is anything on the floor?
 A: Reasoning - <REASONING> Answer - <ANSWER>
 
-ChatGPT:
+> ChatGPT
 A: Reasoning - In a spaceship without gravity, objects do not behave as they do on Earth with gravity. When the cup with the needle in it is knocked over, the cup and needle will not fall to the "floor" as they would on Earth. Instead, they will float in place or move in the direction of the force applied to them. Similarly, when the book is lifted and placed on the desk, it will not stay on the desk as it would on Earth; it will float away from the desk unless secured in place. Therefore, in the absence of gravity, there is no concept of objects being "on the floor" as we understand it on Earth. Answer - NO (because there is no concept of "on the floor" in zero-gravity environment).
 ```
 
@@ -504,7 +545,7 @@ A: Reasoning - In a spaceship without gravity, objects do not behave as they do 
 * See also: [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)
 
 ```text
-User:
+> User
 Task: Calculate when I need to arrive at the Music City BMX National Race for my son to be on time for his 9-10 Open race.
 Think: I need to find out what time the first race begins. I can use a web search of the Music City BMX site to get the information.
 Action: SEARCH https://www.musiccitybmx.com
@@ -520,7 +561,7 @@ Think: If 10 motos took 5mins, 30 motos will take 15 mins. The race starts at 9a
 Task: Calculate what time my 36-40 novice race will end at the USA BMX Grand Nationals.
 Think:
 
-ChatGPT:
+> ChatGPT
 I need to find out what time the first race begins at the USA BMX Grand Nationals. I can use a web search of the USA BMX site to get the information.
 Action: SEARCH https://www.usabmx.com/events/grands
 Result: [Note: As an AI language model, I am unable to perform web searches. Please assume a hypothetical result fo the purpose of this exercise.] The first race begins at 8am.
@@ -570,7 +611,7 @@ Think: If the 36-40 Novice race starts around 9:12am and takes 2 minutes, then i
   * This technique allows for the creation of automated workflows.
 
 ```text
-`User:
+> User
 Input: "Vanderbilt University (informally Vandy or VU) is a private research university in Nashville, Tennessee. Founded in 1873, it was named in honor of shipping and rail magnate Cornelius Vanderbilt, who provided the school its initial $1-million endowment in the hopes that his gift and the greater work of the university would help to heal the sectional wounds inflicted by the Civil War.[11]"
 Output: The following is a list of the events and dates in the output: Vanderbilt Founded, 1873
 Explanation: The output has unwanted text at the start and should only include the names and dates
@@ -589,7 +630,7 @@ Grade: 10/10
 Input: "The Fugitives and Southern Agrarians were based at the university in the first half of the 20th century and helped revive Southern literature among others. [13][14] Vanderbilt is a founding member of the Southeastern Conference and has been the conference's only private school since 1966.[15]"
 Output: The Fugitives and Southern Agrarians, first half of 20th century, Vanderbilt is a founding member of the southeastern conference, 1966
 
-ChatGPT:
+> ChatGPT
 Explanation: The outout includes the key events and corresponding time periods mentioned in the input text. It mentions "The Fugitives and Southern Agrarians" being based at the university in the "first half of the 20th century" and that "Vanderbilt is a founding member of the Southeastern Conference" with the year "1966" being the time when it became the conference's only private school. However, the output could be improved by using consistent capitalization for "Southeaster Conference."
 Grade: 9/10
 ```

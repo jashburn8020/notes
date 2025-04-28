@@ -6,9 +6,40 @@ published: true
 plantuml: false
 ---
 
-Summary of the Prompt Engineering for ChatGPT course at <https://www.coursera.org/learn/prompt-engineering/>, part 4 of 4: Prompt Patterns III.
+Summary of the [Prompt Engineering for ChatGPT course at Coursera](https://www.coursera.org/learn/prompt-engineering/), part 4 of 4, covering Ask for Input Pattern, Outline Expansion Pattern, Menu Actions Pattern, Fact Check List Pattern, Tail Generation Pattern, and Semantic Filter Pattern.
 
-This summary is mostly generated using ChatGPT and Gemini based on the course transcript, while the examples are mostly copied from the course itself.
+* **Ask for Input Pattern**
+  * To instruct the LLM to listen to the rules or instructions provided in the prompt and then explicitly ask the user for the input to which those rules should be applied.
+  * `Whenever I ask you to write a prompt for me to accomplish a task, list what the task is, list alternative approaches for completing the task, and then write a prompt for yourself for each approach. When you are done, ask me of the next prompt to create alternatives for. Ask me for the first task.`
+* **Outline Expansion Pattern**
+  * To overcome the input and output limitations of LLMs by enabling the generation of large pieces of work in smaller, manageable sections by creating an outline and iteratively expanding specific points within that outline.
+  * `Act as an outline expander. Generate a bullet point outline based on the input that I give you and then ask me for which bullet point you should expand on. Create a new outline for the bullet point that I select. At the end, ask me for what bullet point to expand next. Ask me for what to outline.`
+* **Menu Actions Pattern**
+  * To create a "menu" of operations (pre-defined prompts) that can be reused within a conversation with an LLM via specific keywords or phrases.
+  * `Whenever I type: "add FOOD", you will add FOOD to my grocery list and update my estimated grocery bill. Whenever I type "remove FOOD", you will remove FOOD from my grocery list and update my estimated grocery bill. Whenever I type "save" you will list alternatives to my added FOOD to save money. At the end, you will ask me for the next action. Ask me for the first action.`
+* **Fact Check List Pattern**
+  * To generate a list of the underlying facts presented in the LLM's output that can help users identify key pieces of information that need to be verified for accuracy.
+  * `Whenever you output text, generate a set of facts that are contained in the output. The set of facts should be inserted at the end of the output. The set of facts should be the fundamental facts that could undermine the veracity of the output if any of them are incorrect.`
+* **Tail Generation Pattern**
+  * To generate a "tail" at the end of an LLM's output as a way to prevent the LLM from forgetting its initial instructions over a long conversation.
+  * `Whenever I ask you to write a prompt for me to accomplish a task, list what the task is, list alternative approaches for completing the task, and then write a prompt for yourself for each approach. When you are done, ask me for the next prompt to create alternatives for. Ask me what I want you to write a prompt for.`
+* **Semantic Filter Pattern**
+  * To instruct the LLM to act as a filter, removing or keeping information based on semantic understanding rather than just keyword matching.
+  * `Filter this information to remove all dates and rewrite the text as little as possible to fix the issues caused by the date removals.`
+  * `Filter the information below to remove any information that would help someone figure out that the patient has diabetes. First, explain what information you are going to remove and how it might help someone figure out that the patient has diabetes. Then, provide the filtered information.`
+
+_The following summary is mostly generated using ChatGPT and Gemini based on the course transcript, while the examples are mostly copied from the course itself._
+
+---
+
+* [Prompt Patterns III](#prompt-patterns-iii)
+  * [Ask for Input Pattern](#ask-for-input-pattern)
+  * [Combining Patterns](#combining-patterns)
+  * [Outline Expansion Pattern](#outline-expansion-pattern)
+  * [Menu Actions Pattern](#menu-actions-pattern)
+  * [Fact Check List Pattern](#fact-check-list-pattern)
+  * [Tail Generation Pattern](#tail-generation-pattern)
+  * [Semantic Filter Pattern](#semantic-filter-pattern)
 
 ## Prompt Patterns III
 
@@ -16,7 +47,7 @@ This summary is mostly generated using ChatGPT and Gemini based on the course tr
 
 * Ask for Input Pattern:
   * This pattern is used to instruct the LLM to listen to the rules or instructions provided in the prompt and then explicitly ask the user for the input to which those rules should be applied.
-  * It prevents the LLM from immediately generating a response or taking action before receiving the specific input from the user.+
+  * It prevents the LLM from immediately generating a response or taking action before receiving the specific input from the user.
   * This is useful for creating interactive experiences and controlling the flow of the conversation.
 * Rationale:
   * Without this pattern, LLMs might prematurely generate responses or examples based on the rules provided, rather than waiting for the user's specific input.
@@ -40,10 +71,12 @@ This summary is mostly generated using ChatGPT and Gemini based on the course tr
   * It helps to avoid the LLM generating unwanted content or taking premature actions.
 
 ```text
-User:
+--- WITHOUT PATTERN ---
+
+> User
 Whenever I ask you to write a prompt for me to accomplish a task, list what the task is, list alternative approaches for completing the task, and then write a prompt for yourself for each approach. When you are done, ask me of the next prompt to create alternatives for.
 
-ChatGPT:
+> ChatGPT
 Certainly! Let's start by creating a prompt for the task of "organizing a cluttered desk." Here are three alternative approaches for completing the task:
 
 1. [...]
@@ -55,12 +88,14 @@ Now I'll write a prompt for myself for each approach:
 Prompt for Approach 1:
 [...]
 
-User:
+--- WITH PATTERN ---
+
+> User
 Whenever I ask you to write a prompt for me to accomplish a task, list what the task is, list alternative approaches for completing the task, and then write a prompt for yourself for each approach. When you are done, ask me of the next prompt to create alternatives for.
 
 Ask me for the first task.
 
-ChatGPT:
+> ChatGPT
 Certainly! Let's begin. What is the first task you would like me to create alternative approaches and prompts for?
 ```
 
@@ -126,18 +161,18 @@ Certainly! Let's begin. What is the first task you would like me to create alter
   * It's a powerful technique for tackling ambitious projects with LLMs.
 
 ```text
-User:
+> User
 Act as an outline expander. Generate a bullet point outline based on the input that I give you and then ask me for which bullet point you should expand on. Create a new outline for the bullet point that I select. At the end, ask me for what bullet point to expand next.
 
 Ask me for what to outline.
 
-ChatGPT:
+> ChatGPT
 Sure, I'd be happy to help you with that! Please provide me with the topic or subject that you would like me to create an outline for.
 
-User:
+> User
 Writing effective prompts for ChatGPT
 
-ChatGPT:
+> ChatGPT
 Great! Here's a bullet point outline for "Writing Effective Prompts for ChatGPT":
 
 1. Introduction to ChatGPT
@@ -164,10 +199,10 @@ Great! Here's a bullet point outline for "Writing Effective Prompts for ChatGPT"
 
 Please let me know which bullet point you would like me to expand on, and I will create a new outline for that section.
 
-User:
+> User
 3.
 
-ChatGPT:
+> ChatGPT
 Certainly! Here's a more detailed outline for the section "3. Tips for Writing Effective Prompts":
 
 3. Tips for Writing Effective Prompts
@@ -190,10 +225,10 @@ Certainly! Here's a more detailed outline for the section "3. Tips for Writing E
 
 Please let me know which sub-bullet point you would like me to expand on next, and I will create a new outline for that subsection.
 
-User:
+> User
 3.2
 
-ChatGPT:
+> ChatGPT
 Sure! Here's a more detailed outline for the subsection "3.2 Experimenting with Different Prompt Styles":
 
 3.2. Experimenting with Different Prompt Styles
@@ -227,7 +262,7 @@ Please let me know which sub-bullet point you would like me to expand on next, a
   * This is particularly useful for long conversations or when performing the same tasks multiple times.
 * Rationale:
   * Simplifies repetitive tasks by codifying actions.
-  * Improves efficiency by allowing users to trigger complex operations with short commands.#
+  * Improves efficiency by allowing users to trigger complex operations with short commands.
   * Facilitates consistency in how certain tasks are performed.
   * Enables the creation of interactive "programs" within a prompt.
   * Allows for sharing and reuse of helpful prompts or actions.
@@ -257,16 +292,16 @@ Please let me know which sub-bullet point you would like me to expand on next, a
   * It simplifies complex interactions by abstracting away the need for lengthy prompts.
 
 ```text
-User:
+> User
 Whenever I type: "write <Bullet Point> <Paragraphs>", you will write content for the selected bullet point <Bullet Point>. You will write <Paragraphs> of text. Whenever I type just "<Bullet Point>" you will expand that bullet point. At the end, you will ask me for the next action.
 
-ChatGPT:
+> ChatGPT
 Understood! Please provide me with the specific bullet point you would like me to write content for, along with the number of paragraphs you would like me to write. Alternatively, you can provide just the bullet point if you would like me to expand on it and create a new outline. After completing the requested action, I will ask you for the next action.
 
-User:
+> User
 write 3.5.3 2
 
-ChatGPT:
+> ChatGPT
 3.5.3. Experimenting with Tone and Style Variations
 
 When crafting prompts for language models like ChatGPT, experimenting with variations in tone and style can be a valuable exercise. Tone refers to [...]
@@ -275,10 +310,10 @@ The process of experimenting with tone and style variations begins with creating
 
 What would you like me to do next? Please provide me with the specific bullet point you would like me to write content for, along with the number of paragraphs you would like me to write. Alternatively, you can provide just bullet point if you would like me to expand on it and create a new outline.
 
-User:
+> User
 3.5.2
 
-ChatGPT:
+> ChatGPT
 Here's a more detailed outline for the subsection "3.5.2. Matching Tone and Style to Desired Output":
 
 3.5.2. Matching Tone and Style to Desired Output
@@ -298,10 +333,10 @@ Here's a more detailed outline for the subsection "3.5.2. Matching Tone and Styl
 
 Please let me know which sub-bullet point you would like me to expand on next, and I will create a new outline for that subsection. Alternatively, you can provide me with the specific sub-bullet point you would like me to write content for, along with the number of paragraphs you would like me to write.
 
-User:
+> User
 text 3.5.2.3 1
 
-ChatGPT:
+> ChatGPT
 3.5.2.3. Examples of Tone and Style for Different User Cases
 
 The tone and style of a prompt can vary significantly depending on the specific use case and desired outcome. For example, in customer support interactions, the tone is often friendly and helpful [...]
@@ -337,18 +372,18 @@ The tone and style of a prompt can vary significantly depending on the specific 
   * While not a foolproof method, it significantly improves the likelihood of identifying and correcting inaccuracies.
 
 ```text
-User:
+> User
 Whenever you output text, generate a set of facts that are contained in the output. The set of facts should be inserted at the end of the output. The set of facts should be the fundamental facts that could undermine the veracity of the output if any of them are incorrect.
 
-ChatGPT:
+> ChatGPT
 Understood! Whenever I output text, I will generate a set of fundamental facts contained in the output and insert them at the end of the output. These facts are essential for the veracity of the output, and their accuracy is important for the overall credibility of the content.
 
 [...]
 
-User:
+> User
 text 3.5.2.2 1
 
-ChatGPT:
+> ChatGPT
 3.5.2.2. Considerations for Choosing the Appropriate Style
 
 When crafting prompts for language models, it's important to consider the appropriate writing style that matches the content being conveyed. The style of writing can range from technical and precise to creative and expressive, or instructional and informative. The choice of style should be influenced by factors such as the type of content, the intended audience, and the purpose of the communication. For example, technical documentation may require a formal and precise style to convey complex information accurately, while creative writing projects [...]
@@ -366,11 +401,11 @@ When crafting prompts for language models, it's important to consider the approp
 ```
 
 ```text
-User:
+> User
 When you next output an answer, generate a set of facts that are contained in the answer. The set of facts should be numbered and inserted at the end of the answer. The set of facts should be the fundamental facts that could undermine the veracity of the answer if any of them are incorrect. The answer should have an indication in the form [NUMBER] in places that correspond to the numbered facts.
 Write 2 paragraphs on the effects of Likert Bias.
 
-ChatGPT:
+> ChatGPT
 Likert bias, also known as response style bias, refers to the tendency of respondents to answer Likert-scale questions in a patterned or skewed way, rather than providing responses that truly reflect their thoughts or feelings. One common form is central tendency bias, where individuals avoid extreme responses and consistently select the middle options, potentially masking strong opinions or attitudes [1]. Another form is acquiescence bias, in which respondents tend to agree with statements regardless of content, especially when unsure or fatigued [2]. These patterns can distort the validity of survey data, leading to inaccurate conclusions about public opinion, employee satisfaction, or consumer preferences [3].
 
 The effects of Likert bias can be significant in both academic research and applied settings. When responses cluster artificially due to bias rather than true attitudes, it becomes difficult to distinguish between groups or detect meaningful trends over time [4]. For example, in workplace surveys, Likert bias may lead managers to believe employee morale is stable or positive, when in fact nuanced concerns are being masked by neutral or agreeable responses [5]. This undermines the reliability of data-driven decision-making and can result in misguided policy or strategic actions based on flawed interpretations [6].
@@ -417,18 +452,18 @@ Set of Fundamental Facts
   * By automating the reminder, it reduces the need for the user to manually reiterate instructions.
 
 ```text
-User:
+> User
 Whenever I ask you to write a prompt for me to accomplish a task, list what the task is, list alternative approaches for completing the task, and then write a prompt for yourself for each approach. When you are done, ask me for the next prompt to create alternatives for.
 
 Ask me what I want you to write a prompt for.
 
-ChatGPT:
+> ChatGPT
 Certainly! What task would you like me to write a prompt for?
 
-User:
+> User
 Write a prompt for ChatGPT to automatically detect questions in a chain of emails and summarize everyone's opinion on the questions as bullet points beneath each question.
 
-ChatGPT:
+> ChatGPT
 Task: Write a prompt for ChatGPT to automatically detect questions in a chain of emails and summarize everyone's opinion on the questions as bullet points beneath each question.
 
 Alternative Approaches:
@@ -437,17 +472,15 @@ Alternative Approaches:
 
 Please let me know if you have another task for which you'd like me to write a prompt and create alternative approaches.
 
-User:
-Write a prompt to evaluate several different prompts for summarizing the questions in an email conversation and teh different stakeholders' perspectives on the questions.
+> User
+Write a prompt to evaluate several different prompts for summarizing the questions in an email conversation and the different stakeholders' perspectives on the questions.
 
-ChatGPT:
+> ChatGPT
 [...]
 Please let me know if you have another task for which you'd like me to write a prompt and create alternative approaches.
 ```
 
 ### Semantic Filter Pattern
-
-Here's a summary of the provided text, focusing on the semantic filter prompting pattern:
 
 * Semantic Filter Prompting Pattern:
   * This pattern involves instructing the LLM to act as a filter, taking in text and removing or keeping information based on its meaning or specified qualities.
@@ -463,11 +496,11 @@ Here's a summary of the provided text, focusing on the semantic filter prompting
   * You can also instruct the LLM to rewrite the text minimally to address any awkwardness caused by the removals.
 * Format of the Semantic Filter Pattern:
   * To use this pattern, your prompt should make the following fundamental contextual statements:
-    * Filter this information to remove X
+    * `Filter this information to remove X`
   * You will need to replace "X" with an appropriate definition of what you want to remove, such as. "names and dates" or "costs greater than $100".
   * Examples:
-    * Filter this information to remove any personally identifying information or information that could potentially be used to re-identify the person.
-    * Filter this email to remove redundant information.
+    * `Filter this information to remove any personally identifying information or information that could potentially be used to re-identify the person.`
+    * `Filter this email to remove redundant information.`
 * Benefits:
   * Enables filtering of text based on meaning and context, rather than just keywords.
   * Can be used to remove sensitive or confidential information.
@@ -484,7 +517,7 @@ Here's a summary of the provided text, focusing on the semantic filter prompting
   * However, its limitations and potential for errors necessitate careful implementation and supplementary checks.
 
 ```text
-User:
+> User
 Filter this information to remove all dates and rewrite the text as little as possible to fix the issues caused by the date removals.
 
 Vanderbilt University (informally Vandy or VU) is a private research university in Nashville, Tennessee. Founded in 1873, it was named in honor of shipping and rail magnate Cornelius Vanderbilt, [...]
@@ -493,14 +526,14 @@ The university comprises ten schools and enrolls approximately 13,800 students f
 
 The Fugitives and Southern Agrarians were based at the university in the first half of the 20th century and helped revive Southern literature among others. [...]
 
-ChatGPT:
+> ChatGPT
 Vanderbilt University (informally Vandy or VU) is a private research university in Nashville, Tennessee. Founded in the 19th century, it was named in honor of shipping and rail magnate Cornelius Vanderbilt, [...]
 
 The university comprises ten schools and enrolls approximately 13,800 students from the US and over 100 foreign countries. Vanderbilt University Medical Center, formerly part of the university, became a separate institution in the 21st century. With the exception of the off-campus observatory [...]
 
 The Fugitives and Southern Agrarians were based at the university in the first half of the 20th century and helped revive Southern literature among others. [...]
 
-User:
+> User
 Filter the information below to remove any information that would help someone figure out that the patient has diabetes. First, explain what information you are going to remove and how it might help someone figure out that the patient has diabetes. Then, provide the filtered information.
 
 Patient Medical Record
@@ -534,7 +567,7 @@ Acetaminophen as needed for pain
 Allergies:
 Penicillin (causes rash)
 
-ChatGPT:
+> ChatGPT
 Information to be removed and why:
 
 1. The chief complaint of "increased thirst and fatigue" should be removed because increased thirst (polydipsia) is a common symptom of diabetes.

@@ -6,9 +6,39 @@ published: true
 plantuml: false
 ---
 
-Summary of the Prompt Engineering for ChatGPT course at <https://www.coursera.org/learn/prompt-engineering/>, part 3 of 4: Prompt Patterns II.
+Summary of the [Prompt Engineering for ChatGPT course at Coursera](https://www.coursera.org/learn/prompt-engineering/), part 3 of 4, covering Game Play Pattern, Template Pattern, Meta Language Creation Pattern, Recipe Pattern, and Alternative Approaches Pattern.
 
-This summary is mostly generated using ChatGPT and Gemini based on the course transcript, while the examples are mostly copied from the course itself.
+* **Game Play Pattern**
+  * To create a game around a given topic.
+  * `Create a game for me around the topic of cybersecurity. The game should involve identifying potential security risks in a given piece of code.`
+  * `Create a trivia game for me around the topic of world history. The game should involve answering questions about different historical events.`
+* **Template Pattern**
+  * To structure the LLM output in a desired format, similar to giving an assistant a form letter with placeholders to fill in.
+  * `I am going to give you a template for your output. CAPITALIZED WORDS are my placeholders. Fill in my placeholders with your output. Please preserve the overall formatting of my template. My template is: Bio: <NAME>; Executive Summary: <ONE SENTENCE SUMMARY>. Extract information about the people in the following: ...`
+* **Meta Language Creation Pattern**
+  * To create a new language or vocabulary for interaction with the LLM.
+  * `Whenever I say 'generate a report', I want you to create a summary of the most important points we've discussed.`
+  * `Whenever I say 'tell me a story', I want you to create a short narrative based on the topic we're discussing.`
+  * `When I say "variations(<something>)", I mean give me ten different variations of <something>`
+* **Recipe Pattern**
+  * To get the LLM to generate a sequence of steps or a procedure for achieving a certain goal.
+  * `I would like to deploy a web application to AWS using Docker containers and Ansible. I know that I need to create a Dockerfile, write an Ansible playbook, and configure AWS. Provide a complete sequence of steps for me.`
+  * `I would like to bake a chocolate cake. I know that I need flour, sugar, cocoa powder, and eggs. Provide a complete sequence of steps for me.`
+* **Alternative Approaches Pattern**
+  * To get the LLM to provide alternative ways of accomplishing a task.
+  * `Whenever I ask you to deploy an application to a specific cloud service, if there are alternative services to accomplish the same thing with the same cloud service provider, list the best alternative services and then compare/contrast the pros and cons of each approach.`
+  * `Whenever I ask you for a workout routine, if there are alternative exercises to accomplish the same fitness goal, list the best alternate exercises and then compare/contrast the pros and cons of each approach.`
+
+_The following summary is mostly generated using ChatGPT and Gemini based on the course transcript, while the examples are mostly copied from the course itself._
+
+---
+
+* [Prompt Patterns II](#prompt-patterns-ii)
+  * [Game Play Pattern](#game-play-pattern)
+  * [Template Pattern](#template-pattern)
+  * [Meta Language Creation Pattern](#meta-language-creation-pattern)
+  * [Recipe Pattern](#recipe-pattern)
+  * [Alternative Approaches Pattern](#alternative-approaches-pattern)
 
 ## Prompt Patterns II
 
@@ -42,21 +72,21 @@ This summary is mostly generated using ChatGPT and Gemini based on the course tr
   * This pattern allows for the creation of very engaging learning experiences.
 
 ```text
-User:
+> User
 We are going to play a game involving prompt engineering. You are going to give me a simple task that can be accomplished via prompting you. You tasks should all have a reasoning or programming component to them, although they shouldn't require creating source code.
 
 I will try to write a prompt for you to solve the task. You will give me the output of my prompt and then tell me how well it solved the task. Ask me questions until I tell you to stop. You will ask me a question, wait for my response, and then ask me another question after telling me how well I did.
 
 Ask me the first question.
 
-ChatGPT:
+> ChatGPT
 Great! Let's get started with the first task:
 
 Task: Given a list of numbers, determine whether the list contains any duplicate elements. If it does, return "Yes, there are duplicates." If it does not, return "No duplicates found."
 
 Please write a prompt for me to solve this task.
 
-User:
+> User
 Numbers: 1, 2, 3
 Duplicates? No duplicates found.
 Numbers: 2, 2, 2
@@ -66,7 +96,7 @@ Duplicates? Yes there are duplicates.
 Numbers: 100, 10000, 1000000
 Duplicates?
 
-ChatGPT:
+> ChatGPT
 No duplicates found.
 
 Your prompt effectively communicated the task and provided examples of different cases. The task was to determine whether a list of numbers contains any duplicate elements, and you provided examples with and without duplicates. Based on your prompt, I was able to correctly determine that hte list "100, 10000, 100000" does not contain any duplicate elements, and I provided the correct response "No duplicates found."
@@ -77,12 +107,12 @@ Task: Given a sentence, count the number of words in the sentence and return the
 
 Please write a prompt for me to solve this task.
 
-User:
+> User
 I am going to give you a template for your output. NUMBER is my placeholder. Fill in my placeholder with your output. Please preserve the overall formatting of my template. My template is "The sentence contains NUMBER words."
 
 How many words are in the following sentence: "The cat jumped on the mat."
 
-ChatGPT:
+> ChatGPT
 The sentence contains 6 words.
 
 Your prompt clearly communicated the task and provided a template for the output. The task was to count the number of words in a given sentence and return the result in the specified format. Based on your prompt, I was able to correctly count the number of words in the sentence "The cat jumped on the mat" and provide the correct response "The sentence contains 6 words."
@@ -93,7 +123,7 @@ Task: Given a date in the format "YYYY-MM-DD," determine whether the year is a l
 
 Please write a prompt of me to solve this task.
 
-User:
+> User
 Date: 2000-01-01
 Leap Year? The year 2000 is a leap year.
 Date: 2004-05-18
@@ -103,7 +133,7 @@ Leap Year? The year 2004 is not a leap year.
 Date: 2023-04-12
 Leap Year?
 
-ChatGPT:
+> ChatGPT
 The year 2023 is not a leap year.
 
 Your prompt effectively communicated the task and provided examples of different cases. The task was to determine whether a given year (extracted from a date in the format "YYYY-MM-DD") is a leap year or not, and you provided examples of both leap years and non-leap years. Based on your prompt, I was able to correctly determine that the year 2023 is not a leap year, and I provided the correct response "The year 2023 is not a leap year."
@@ -116,7 +146,7 @@ Let's move on to another task:
 ```
 
 ```text
-User:
+> User
 We are going to play a game involving prompt engineering. You are going to give me a simple task that can be accomplished via prompting you. Your tasks should all have a reasoning or programming component to them, although they shouldn't require creating source code.
 
 I will try to write a prompt for you to solve the task. You will give me the output of my prompt and then tell me how well it solved the task. Ask me questions until I tell you to stop. You will ask me a question, wait for my response, and then ask me another question after telling me how well I did.
@@ -125,7 +155,7 @@ All of your questions should revolve around the "Recipe Prompt Pattern". This pa
 
 Ask me the first question.
 
-ChatGPT:
+> ChatGPT
 Great! Let's get started with the first task for the "Recipe Prompt Pattern" game.
 
 Task 1: Your goal is to create a prompt that instructs me to generate a sequence of steps for assembling a simple wooden bookshelf. The bookshelf has four main components: the top and bottom panels, the side panels, and the shelves. You have been provided with the following "Ingredients" (intermediate steps):
@@ -135,14 +165,14 @@ Task 1: Your goal is to create a prompt that instructs me to generate a sequence
 
 Using these intermediate steps, create a prompt that will result in a complete sequence of steps for assembling the bookshelf. Remember, the prompt should be designed to fill in any missing steps and provide a clear order for completing the assembly.
 
-User:
+> User
 We are going to change the topic of your questions. The topic is now: The Context Manager Pattern
 
 1) Intent and Context: The intent of this pattern is to enable users to specify or remove context for a conversation with an LLM. The goal is to focus the conversation on specific topics or exclude unrelated topics from consideration. This pattern gives users greater control over what statements the LLM considers or ignores when generating output.
 
 Ask me the first question.
 
-ChatGPT:
+> ChatGPT
 Certainly! Let's get started with the first task for the "Context Manager Pattern" game.
 
 Task 1: Your goal is to create a prompt that instructs me to provide information about the history of the Eiffel Tower. However, you want to ensure that the response is focused exclusively on the construction of the Eiffel Tower and does not include any information about events or incidents that occurred after its completion. In other words, you want to specify the context of the conversation to be limited to the construction period of the Eiffel Tower.
@@ -190,7 +220,7 @@ Using the Context Manager Pattern, create a prompt that will result in a respons
     * Reduces model-generated variations and aligns outputs with user-defined expectations.
 
 ```text
-User:
+> User
 I am going to give you a template for your output. CAPITALIZED WORDS are my placeholders. Fill in my placeholders with your output. Please preserve the overall formatting of my template. My template is:
 
 ***Question**** QUESTION
@@ -198,23 +228,23 @@ I am going to give you a template for your output. CAPITALIZED WORDS are my plac
 
 I will give you the data to format in the next prompt. Create twenty questions using my template.
 
-ChatGPT:
+> ChatGPT
 Of course! Please provide the data you would like me to use to create the twenty questions using your template. Once I have the data, I will format it according to the template you provided.
 
-User:
+> User
 Paleo-Indians, Paleoindians or Paleo-Americans were the first peoples who entered, and subsequently inhabited, the Americas during the final glacial episodes of the late Pleistocene period. The prefix paleo- comes from the Greek adjective palaios [...]
 
-ChatGPT:
+> ChatGPT
 Question: WHO WERE THE PALEO-INDIANS?
 Answer: Paleo-Indians, also known as Paleoindians or Paleo-Americans, were the first peoples who entered, and subsequently inhabited, the Americas during the final glacial episodes of the late Pleistocene period.
 
 Question: WHAT DOES THE PREFIX "PALEO-" MEAN?
 Answer: The prefix "paleo-" comes from the Greek adjective "palaios" [...]
 
-User:
+> User
 Using the content here: https://www.dre.vanderbilt.edu/~schmidt/resume.html create twenty questions.
 
-ChatGPT:
+> ChatGPT
 As of my knowledge cutoff date in September 2021, the content of the webpage provided may have been different from its current state. Therefore, I will generate questions based on the content available on the webpage as of my knowledge cutoff date. If the content has changed since then, please let me know, and I can adjust the questions accordingly.
 
 Question: WHAT IS THE NAME OF THE INDIVIDUAL WHOSE RESUME IS PRESENTED ON THE WEBPAGE?
@@ -225,7 +255,7 @@ Answer: As of the knowledge cutoff date in September 2021, Dr. Douglas C. Schmid
 
 [...]
 
-User:
+> User
 I am going to give you a template for your output. CAPITALIZED WORDS are my placeholders. Fill in my placeholders with your output. Please preserve the overall formatting of my template. My template is:
 
 ## Bio: <NAME>
@@ -238,7 +268,7 @@ In the years before the American Civil War of 1861-1865, the Methodist Episcopal
 
 The following year, McTyeire stayed at the New York City residence of Cornelius Vanderbilt, whose second wife was Frank Armstrong Crawford Vanderbilt (1839-1885), a cousin of McTyeire's wife, Arnelia Townsend McTyeire (1827-1891); both women were from Mobile, Alabama [...]
 
-ChatGPT:
+> ChatGPT
 Bio: Holland Nimmons McTyeire
 Executive Summary: Holland Nimmons McTyeire was a Nashville bishop who played a key role in the founding of Vanderbilt University and served as the chairman of the Board of Trust for life.
 Full Description: Holland Nimmons McTyeire was a bishop of the Methodist Episcopal Church South who lobbied for the creation of a regional university in Nashville, leading to the founding of "The Central University of the Methodist Episcopal Church, South" in 1872. [...]
@@ -285,14 +315,14 @@ Full Description: Cornelius Vanderbilt was the wealthiest man in the United Stat
   * Ensures the language model interprets input correctly, leading to better and more predictable results.
 
 ```text
-User:
+> User
 We are going to create a trip planning application. I will describe my trip and you will list interesting things to do in places that I will pass through. I will tell you how many days I will stay in each place and you will list possible itineraries.
 
 To describe my route, I am going to use a shorthand notation.
 
 When I say "Nashville,3->Memphis,2", I mean that my route will go from Nashville to Memphis and that I will stay 3 days in Nashville and 2 days in Memphis.
 
-ChatGPT:
+> ChatGPT
 Got it! I'll provide you with a list of interesting things to do in each place you mention, along with possible itineraries based on the number of days you plan to stay in each location. Let's start with your example route: "Nashville,3->Memphis,2".
 
 Nashville (3 days):
@@ -301,10 +331,10 @@ Nashville, also known as "Music City," is famous for its vibrant music scene, es
 
 Day 1: [...]
 
-User:
+> User
 Nashville,0->Dallas,1->GranburyTX,4
 
-ChatGPT:
+> ChatGPT
 Surel Since you mentioned that you won't be spending any time in Nashville, I'll focus on providing you with interesting things to do and possible itineraries for your 1-day stay in Dallas and your 4-day stay in Granbury, Texas.
 
 Dallas (1 day):
@@ -360,16 +390,16 @@ Day 1:
   * Placeholder notation like ellipses offers a natural, intuitive way to signal uncertainty or incomplete information.
 
 ```text
-User:
+> User
 We are going to add a feature. I will tell you my start and end destination and you will provide a complete list of stops for me, including places to stop between my start and destination.
 
-ChatGPT:
+> ChatGPT
 Sure! To provide you with a complete list of stops, including places to stop between your start and end destinations, I'll need to know the specific route you plan to take. Additionally, it would be helpful to know your preferences [...]
 
-User:
+> User
 Nashville,0->...->...->FairhopeAL,2
 
-ChatGPT:
+> ChatGPT
 Certainly! Since you mentioned that you won't be spending any time in Nashville and that your and destination is Fairhope, Alabama, where you plan to spend 2 days, I'll provide a list of potential stops along a route from Nashville to Fairhope. I'll also include interesting things to do during your 2-day stay in Fairhope.
 
 Please note that the specific route and stops you choose may depend on your interests, time constraints, and other factors. Here's a sample route with suggested stops:
@@ -381,7 +411,7 @@ Please note that the specific route and stops you choose may depend on your inte
 - Explore the Birmingham Museum of Art, which features a diverse collection of art.
 - Take a stroll through Railroad Park, a popular urban green space.
 
-1. Montgomery, AL. (en route stop)
+3. Montgomery, AL. (en route stop)
 - Visit the Rosa Parks Museum to learn about Rosa Parks and the Montgomery Bus Boycott.
 - Explore the Alabama State Capitol and the surrounding historic district.
 - Visit the National Memorial for Peace and Justice, dedicated to victims of racial injustice
@@ -423,16 +453,16 @@ Please note that the specific route and stops you choose may depend on your inte
   * This pattern can help users come up with more creative solutions than they would have come up with on their own.
 
 ```text
-User:
+> User
 From now on, if there are alternative ways to accomplish the same thing, list the best alternate approaches. Compare and contrast the alternatives and ask me which one I want to use.
 
-ChatGPT:
+> ChatGPT
 Understood! I will provide alternative approaches when possible, compare and contrast them, and ask you to choose the one you'd like to use. [...]
 
-User:
+> User
 Write a prompt for ChatGPT using few shot examples to determine if a date in YYYY-MM-DD format is a leap year. The output should either be "YYYY is a leap year" or "this is not a leap year".
 
-ChatGPT:
+> ChatGPT
 To create a prompt for ChatGPT to determine if a date in the format YYYY-MM-DD is a leap year, we can use few-shot learning by providing a few examples of input-output pairs. Here are two alternative approaches to writing the prompt
 
 Approach 1: Direct Question Format
@@ -482,18 +512,18 @@ Please let me know which approach you would like to use, or if you have any othe
 ```
 
 ```text
-User:
+> User
 Whenever I ask you to write a prompt for me to accomplish a task, list what the task is, list alternative approaches for completing the task, and then write a prompt for yourself for each approach. When you are done, ask me for the next prompt to create alternatives for.
 
 Ask me what I want you to write a prompt for.
 
-ChatGPT:
+> ChatGPT
 Certainly! What task would you like me to write a prompt for?
 
-User:
+> User
 Write a prompt for ChatGPT to automatically detect questions in a chain of emails and summarize everyone's opinion on the questions as bullet points beneath each question.
 
-ChatGPT:
+> ChatGPT
 Task: Write a prompt for ChatGPT to automatically detect questions in a chain of emails and summarize everyone's opinion on the questions as bullet points beneath each question.
 
 Alternative Approaches:
@@ -522,10 +552,10 @@ ChatGPT, consider the following email chain as a case study. Your task [...]
 
 Please let me know if you have another task for which you'd like me to write a prompt and create alternative approaches.
 
-User:
+> User
 Write a prompt to evaluate several different prompts for summarizing the questions in an email conversation and the different stakeholders' perspectives on the questions.
 
-ChatGPT:
+> ChatGPT
 Task: Write a prompt to evaluate several different prompts for summarizing the questions in an email conversation and the different stakeholders' perspectives on the questions.
 
 Alternative Approaches:
