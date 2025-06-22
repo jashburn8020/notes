@@ -12,8 +12,6 @@ This summary is mostly generated using Google Gemini from an academic paper (see
 
 ## API Generator Pattern
 
-Here's a summary of the API Generator Pattern in bullet points, section by section:
-
 ### Intent and Context
 
 * Generates API specifications (e.g., REST API) from natural language requirements or system descriptions.
