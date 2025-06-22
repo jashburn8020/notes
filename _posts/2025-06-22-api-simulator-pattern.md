@@ -6,7 +6,7 @@ published: true
 plantuml: false
 ---
 
-The API Simulator Pattern, a prompt pattern to review specifications provided to a developer or development team.
+The API Simulator Pattern, a prompt pattern to simulate an API based on a specification provided by a developer or a development team.
 
 This summary is mostly generated using Google Gemini from an academic paper (see Source below). The example at the end is from an actual interaction with Google Gemini (2.5 Flash).
 
@@ -58,6 +58,8 @@ Generate an OpenAPI 3.0.0 specification for a REST API that is strictly complian
 - As a user, I want to add products onto my wishlist so that I can quickly find and buy the product later.
 - As a user, I want to remove products from my wishlist so that I can keep my wishlist only for products that I may want to buy later.
 ```
+
+The following shows an LLM simulating an API based on a specification.
 
 ```text
 User:
