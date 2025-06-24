@@ -49,20 +49,17 @@ The fundamental contextual statements are:
 
 ### Example
 
-An OpenAPI specification was generated for this example using the following prompt:
+Consider an API that supports the following user stories:
+
+* As a user, I want to see all the products that I have added to my wishlist so that I can decide whether to keep or remove the products on my wishlist.
+* As a user, I want to add products onto my wishlist so that I can quickly find and buy the product later.
+* As a user, I want to remove products from my wishlist so that I can keep my wishlist only for products that I may want to buy later.
+
+The following shows an LLM simulating this API based on its specification.
 
 ```text
-Generate an OpenAPI 3.0.0 specification for a REST API that is strictly compliant with RFC 9110. The API should implement the requirements below. Keep the API simple. Include in the specification an example where the wishlist already contains 3 products. Once you have generated the specification, check the specification to make sure it is strictly compliant with RFC 9110.
+> User:
 
-- As a user, I want to see all the products that I have added to my wishlist so that I can decide whether to keep or remove the products on my wishlist.
-- As a user, I want to add products onto my wishlist so that I can quickly find and buy the product later.
-- As a user, I want to remove products from my wishlist so that I can keep my wishlist only for products that I may want to buy later.
-```
-
-The following shows an LLM simulating an API based on a specification.
-
-```text
-User:
 Act as a REST API based on the OpenAPI specification below. I will type in HTTP requests in plain text and you will respond with the appropriate HTTP response based on the specification.
 
 openapi: 3.0.0
@@ -272,13 +269,16 @@ components:
           description: A human-readable explanation specific to this occurrence of the problem.
           example: "An unexpected error occurred while processing your request."
 
-Gemini:
+> Gemini:
+
 Hello! I'm ready to act as a REST API for your Wishlist. Please send your HTTP requests, and I'll respond based on the OpenAPI specification provided.
 
-User:
+> User:
+
 GET https://api.example.com/v1/wishlist
 
-Gemini:
+> Gemini:
+
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -303,22 +303,26 @@ Content-Type: application/json
   }
 ]
 
-User:
+> User:
+
 POST https://api.example.com/wishlist
 
 {
   "productId": "PROD005"
 }
 
-Gemini:
+> Gemini:
+
 HTTP/1.1 201 Created
 Location: /wishlist/PROD005
 Content-Length: 0
 
-User:
+> User:
+
 GET https://api.example.com/v1/wishlist
 
-Gemini:
+> Gemini:
+
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -349,16 +353,20 @@ Content-Type: application/json
   }
 ]
 
-User:
+> User:
+
 DELETE https://api.example.com/v1/wishlist/PROD003
 
-Gemini:
+> Gemini:
+
 HTTP/1.1 204 No Content
 
-User:
+> User:
+
 GET https://api.example.com/v1/wishlist
 
-Gemini:
+> Gemini:
+
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -383,10 +391,12 @@ Content-Type: application/json
   }
 ]
 
-User:
+> User:
+
 DELETE https://api.example.com/v1/wishlist/PROD003
 
-Gemini:
+> Gemini:
+
 HTTP/1.1 404 Not Found
 Content-Type: application/json
 
@@ -395,14 +405,16 @@ Content-Type: application/json
   "message": "Product 'PROD003' not found in wishlist."
 }
 
-User:
+> User:
+
 POST https://api.example.com/wishlist
 
 {
   "someparam": "PROD009"
 }
 
-Gemini:
+> Gemini:
+
 HTTP/1.1 400 Bad Request
 Content-Type: application/json
 
