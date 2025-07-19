@@ -280,6 +280,8 @@ Explanation of implementation:
 ## Prompts
 
 * The following describes the Few-Shot Code Example Generation prompt pattern. It has 5 main sections: (1) Intent and Context, (2) Motivation, (3) Structure and Key Ideas, (4) Example Implementation, and (5) Consequences. Summarise it in bullet points form, section by section. [Text of the pattern]
+* Provide a one-line summary of this pattern.
+* Produce a practical example implementation to show this pattern in action. Focus on the implementation. You may generate any supporting documents to more clearly show how a software engineer would realistically interact with an LLM, making use of this pattern.
 
 ## Source
 
