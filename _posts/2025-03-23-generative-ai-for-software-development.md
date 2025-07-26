@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction to Generative AI for Software Development
-categories: ai llm development
+categories: ai llm software
 published: true
 plantuml: false
 ---
@@ -328,4 +328,3 @@ bt.inorder(bt.root)
 * `I see you use a regular expression to break the corpus into extra words. Is this the fastest and most scalable way? What if there were millions of books instead of just one?`
 * No size fits all and bringing your expertise about your system to understand the problem is vital.
 * Working with an LLM like this can throw up some great ideas, but they're not necessarily always the right ideas for your specific system.
-
